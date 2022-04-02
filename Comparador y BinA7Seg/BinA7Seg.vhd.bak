@@ -1,0 +1,51 @@
+-- Paso de binario a hexadecimal con BinA7Seg.vhd
+
+library IEEE;
+use  IEEE.std_logic_1164.all;
+
+entity BinA7Seg is
+	port(
+			n0, n1, n2, n3 : in std_logic_vector(3 downto 0);		-- Entrada 4 bits
+			a, b, c, d, e, f, g : out std_logic_vector(6 downto 0);	-- Salida a display 7 bits
+			);
+end BinA7Seg;
+
+architecture behavioral of BinA7Seg is
+begin
+	entrada <= n0 & n1 & n2 & n3;
+	salida <= a & b & c & d & e & f & g;
+
+if (entrada=('0','0','0','0')) then
+	salida=('0','0','0','0','0','0','1');
+elsif (entrada=('0','0','0','1')) then
+	salida=('1','0','0','1','1','1','1');
+elsif (entrada=('0','0','1','0')) then
+	salida=('0','0','1','0','0','1','0');
+elsif (entrada=('0','0','1','1')) then
+	salida=('0','0','0','0','1','1','0');
+elsif (entrada=('0','1,'0','0')) then
+	salida=('1','0','0','1','1','0','0');
+elsif (entrada=('0','1','0','1')) then
+	salida=('0','1','0','0','1','0','0');
+elsif (entrada=('0','1','1','0')) then
+	salida=('0','1','0','0','0','0','0');
+elsif (entrada=('0','1','1','1')) then
+	salida=('0','0','0','1','1','1','1');
+elsif (entrada=('1','0','0','0')) then
+	salida=('0','0','0','0','0','0','0');
+elsif (entrada=('1','0','0','1')) then
+	salida=('0','0','0','0','1','0','0');
+elsif (entrada=('1','0','1','0')) then
+	salida=('0','0','0','1','0','0','0');
+elsif (entrada=('1','0','1','1')) then
+	salida=('1','1','0','0','0','0','0');
+elsif (entrada=('1','1','0','0')) then
+	salida=('0','1','1','0','0','0','1');
+elsif (entrada=('1','1','0','1')) then
+	salida=('1','0','0','0','0','1','0');
+elsif (entrada=('1','1','1','0')) then
+	salida=('0','1','1','0','0','0','0');
+elsif (entrada=('1','1','1','1')) then
+	salida=('0','1','1','1','0','0','0');
+end if;
+end behavioral;

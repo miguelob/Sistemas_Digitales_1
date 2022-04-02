@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, D:/Temp/Grupo2/Pract2/Comparador.bdf
+source_file = 1, D:/Temp/Grupo2/Pract2/Pract2.bdf
+source_file = 1, D:/Temp/Grupo2/Pract2/db/Pract2.cbx.xml
+design_name = Pract2
+instance = comp, \B0~I\, B0, Pract2, 1
+instance = comp, \B1~I\, B1, Pract2, 1
+instance = comp, \A0~I\, A0, Pract2, 1
+instance = comp, \A1~I\, A1, Pract2, 1
+instance = comp, \comparator|inst7~0\, comparator|inst7~0, Pract2, 1
+instance = comp, \comparator|inst1\, comparator|inst1, Pract2, 1
+instance = comp, \comparator|inst8~0\, comparator|inst8~0, Pract2, 1
+instance = comp, \AmayorB~I\, AmayorB, Pract2, 1
+instance = comp, \AigualB~I\, AigualB, Pract2, 1
+instance = comp, \AmenorB~I\, AmenorB, Pract2, 1

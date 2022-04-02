@@ -1,0 +1,396 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\Practica7\simulation\modelsim
+Ealu5bits_vhd_tst
+Z1 w1541602566
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dH:\Practica7\simulation\modelsim
+Z6 8H:/Practica7/simulation/modelsim/Practica7.vht
+Z7 FH:/Practica7/simulation/modelsim/Practica7.vht
+l0
+L4
+VQ=H4g2l>ZXMa9`=Zl>NQf2
+!s100 a59m`Z9:V1>bCcS97f[j52
+Z8 OV;C;10.1d;51
+31
+!i10b 1
+Z9 !s108 1541765827.035000
+Z10 !s90 -reportprogress|300|-93|-work|work|H:/Practica7/simulation/modelsim/Practica7.vht|
+Z11 !s107 H:/Practica7/simulation/modelsim/Practica7.vht|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+Aalu5bits_arch
+R2
+R3
+R4
+DEx4 work 16 alu5bits_vhd_tst 0 22 Q=H4g2l>ZXMa9`=Zl>NQf2
+l22
+L6
+VQ1k:HV@9`0Lf7h5^L]]KJ2
+!s100 iAhK<f3]jKWAkP=D6jVhz2
+R8
+31
+!i10b 1
+R9
+R10
+R11
+R12
+R13
+Ealucompleto
+Z14 w1541601294
+R2
+R3
+R4
+R5
+Z15 8H:/Practica7/alucompleto.vhd
+Z16 FH:/Practica7/alucompleto.vhd
+l0
+L7
+VKo7kOeglK[NRC43QiMb[O1
+R8
+31
+Z17 !s108 1541765825.125000
+Z18 !s90 -reportprogress|300|-93|-work|work|H:/Practica7/alucompleto.vhd|
+Z19 !s107 H:/Practica7/alucompleto.vhd|
+R12
+R13
+!s100 =IeMVebcl3:iR6^7lTMk53
+!i10b 1
+Astructural
+R2
+R3
+R4
+DEx4 work 11 alucompleto 0 22 Ko7kOeglK[NRC43QiMb[O1
+l79
+L15
+VTni5mgfQ3EYKTJ:P;OSAU1
+R8
+31
+R17
+R18
+R19
+R12
+R13
+!s100 0o0K6S0haYULMUESAZ5@l1
+!i10b 1
+Ebina7seg
+Z20 w1541594760
+R3
+R4
+R5
+Z21 8H:/Practica7/bina7seg.vhd
+Z22 FH:/Practica7/bina7seg.vhd
+l0
+L6
+VQ22>alNQQRbmUjSW?1M0e1
+R8
+31
+Z23 !s108 1541765826.081000
+Z24 !s90 -reportprogress|300|-93|-work|work|H:/Practica7/bina7seg.vhd|
+Z25 !s107 H:/Practica7/bina7seg.vhd|
+R12
+R13
+!s100 IKYefIU=D1EZ>NY0fZ[Wb0
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 8 bina7seg 0 22 Q22>alNQQRbmUjSW?1M0e1
+l12
+L11
+VAGNFa<jPlQFk@YjZDdXo13
+R8
+31
+R23
+R24
+R25
+R12
+R13
+!s100 S7QLHIj>RUUNF3@zT>Un^3
+!i10b 1
+Efunclogic
+R20
+R3
+R4
+R5
+Z26 8H:/Practica7/FuncLogic.vhd
+Z27 FH:/Practica7/FuncLogic.vhd
+l0
+L6
+V=?MLc3NJYdRGGK4ZZK1Vm3
+R8
+31
+Z28 !s108 1541765823.488000
+Z29 !s90 -reportprogress|300|-93|-work|work|H:/Practica7/FuncLogic.vhd|
+Z30 !s107 H:/Practica7/FuncLogic.vhd|
+R12
+R13
+!s100 B@=PJG6BYU>?jNWgBI1AL2
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 9 funclogic 0 22 =?MLc3NJYdRGGK4ZZK1Vm3
+l14
+L13
+Vn[;O=D5:RG2EUgO_N[5YA3
+R8
+31
+R28
+R29
+R30
+R12
+R13
+!s100 `:PCHY;7Hm5SW3FU1abU61
+!i10b 1
+Emultiplicador
+Z31 w1541598834
+R2
+R3
+R4
+R5
+Z32 8H:/Practica7/Multiplicador.vhd
+Z33 FH:/Practica7/Multiplicador.vhd
+l0
+L5
+VOd1iR0OYfEj:faT;3YgdM3
+R8
+31
+Z34 !s108 1541765823.889000
+Z35 !s90 -reportprogress|300|-93|-work|work|H:/Practica7/Multiplicador.vhd|
+Z36 !s107 H:/Practica7/Multiplicador.vhd|
+R12
+R13
+!s100 eVc:D1G>j[?AKC<>UGAUc3
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 13 multiplicador 0 22 Od1iR0OYfEj:faT;3YgdM3
+l14
+L12
+VKTGZ27fOi4=2<c207PfV<3
+R8
+31
+R34
+R35
+R36
+R12
+R13
+!s100 [`=]2Pfn<H`zYVbVZZa[80
+!i10b 1
+Emux2a11bit
+R20
+R3
+R4
+R5
+Z37 8H:/Practica7/Mux2a11bit.vhd
+Z38 FH:/Practica7/Mux2a11bit.vhd
+l0
+L6
+V6aE@hF0VTF97<c@J:^F<S2
+R8
+31
+Z39 !s108 1541765823.064000
+Z40 !s90 -reportprogress|300|-93|-work|work|H:/Practica7/Mux2a11bit.vhd|
+Z41 !s107 H:/Practica7/Mux2a11bit.vhd|
+R12
+R13
+!s100 b`=n@m16F[>Y8H7IQXZZS0
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 10 mux2a11bit 0 22 6aE@hF0VTF97<c@J:^F<S2
+l14
+L13
+Vn;[h92>anRbg3AY^0HIoO1
+R8
+31
+R39
+R40
+R41
+R12
+R13
+!s100 ZlHPEJjJ1<eLKPaHzYQ`Q3
+!i10b 1
+Emux2a15bits
+Z42 w1541594820
+R3
+R4
+R5
+Z43 8H:/Practica7/Mux2a15bits.vhd
+Z44 FH:/Practica7/Mux2a15bits.vhd
+l0
+L6
+VjakN`PTV;e8?bXWDC_WP30
+R8
+31
+Z45 !s108 1541765822.602000
+Z46 !s90 -reportprogress|300|-93|-work|work|H:/Practica7/Mux2a15bits.vhd|
+Z47 !s107 H:/Practica7/Mux2a15bits.vhd|
+R12
+R13
+!s100 U=W;8O;h]U@[Bf<NDnXh:0
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 11 mux2a15bits 0 22 jakN`PTV;e8?bXWDC_WP30
+l14
+L13
+V;0:2F26:jQQ3H20YTZ80c0
+R8
+31
+R45
+R46
+R47
+R12
+R13
+!s100 Q2[LohP7GVzI`GGKoT[n`1
+!i10b 1
+Emux3a15bits
+R42
+R3
+R4
+R5
+Z48 8H:/Practica7/Mux3a15bits.vhd
+Z49 FH:/Practica7/Mux3a15bits.vhd
+l0
+L5
+V?LVzNn9aOe]9U[eI]`;e31
+R8
+31
+Z50 !s108 1541765820.607000
+Z51 !s90 -reportprogress|300|-93|-work|work|H:/Practica7/Mux3a15bits.vhd|
+Z52 !s107 H:/Practica7/Mux3a15bits.vhd|
+R12
+R13
+!s100 >JcO3gei0IDGIkHM;eil`2
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 11 mux3a15bits 0 22 ?LVzNn9aOe]9U[eI]`;e31
+l13
+L12
+VH[dMeZLNO6Z=<bE9^Y0EF3
+R8
+31
+R50
+R51
+R52
+R12
+R13
+!s100 iBKGddgRNBen1=@T_QdHa2
+!i10b 1
+Esumador1bit
+R42
+R3
+R4
+R5
+Z53 8H:/Practica7/sumador1bit.vhd
+Z54 FH:/Practica7/sumador1bit.vhd
+l0
+L6
+Vc^LlSd35fXjlB`3eokb^e1
+R8
+31
+Z55 !s108 1541765825.603000
+Z56 !s90 -reportprogress|300|-93|-work|work|H:/Practica7/sumador1bit.vhd|
+Z57 !s107 H:/Practica7/sumador1bit.vhd|
+R12
+R13
+!s100 0VS2I:fmMc2:ed:3nYfMJ1
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 11 sumador1bit 0 22 c^LlSd35fXjlB`3eokb^e1
+l17
+L15
+V@Y_V0ME[9z`GDIU4?UaVj3
+R8
+31
+R55
+R56
+R57
+R12
+R13
+!s100 <>4;Sfo38M6DVBWP38?j21
+!i10b 1
+Esumadorrestador5bits
+Z58 w1541601782
+R3
+R4
+R5
+Z59 8H:/Practica7/SumadorRestador.vhd
+Z60 FH:/Practica7/SumadorRestador.vhd
+l0
+L6
+VbgW37@cM2;FMD1Fa7mY1[1
+R8
+31
+Z61 !s108 1541765824.327000
+Z62 !s90 -reportprogress|300|-93|-work|work|H:/Practica7/SumadorRestador.vhd|
+Z63 !s107 H:/Practica7/SumadorRestador.vhd|
+R12
+R13
+!s100 STTR2[AmJ<mR4b58Z>Xah0
+!i10b 1
+Astructural
+R3
+R4
+DEx4 work 20 sumadorrestador5bits 0 22 bgW37@cM2;FMD1Fa7mY1[1
+l27
+L15
+VPfUC4Lc:2KbKb4=2:ZWS^2
+R8
+31
+R61
+R62
+R63
+R12
+R13
+!s100 FTY[E?^^L:h7[PA6h8TC63
+!i10b 1
+Eunidadcontrol
+R42
+R3
+R4
+R5
+Z64 8H:/Practica7/UnidadControl.vhd
+Z65 FH:/Practica7/UnidadControl.vhd
+l0
+L5
+V>G<E]?WRgGNneL48Le6K@2
+R8
+31
+Z66 !s108 1541765821.637000
+Z67 !s90 -reportprogress|300|-93|-work|work|H:/Practica7/UnidadControl.vhd|
+Z68 !s107 H:/Practica7/UnidadControl.vhd|
+R12
+R13
+!s100 CA1`Vmj:9dYb>5VNR9IUQ1
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 13 unidadcontrol 0 22 >G<E]?WRgGNneL48Le6K@2
+l16
+L15
+V:Rm:;K7;bBcb8U9G2B2dA0
+R8
+31
+R66
+R67
+R68
+R12
+R13
+!s100 [1=4TMbdf?OO[Rh8_j^Eg1
+!i10b 1

@@ -1,0 +1,1215 @@
+TimeQuest Timing Analyzer report for Practica10
+Mon Nov 26 09:52:26 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Minimum Pulse Width: 'clk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'clk'
+ 26. Fast Model Hold: 'clk'
+ 27. Fast Model Minimum Pulse Width: 'clk'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Propagation Delay
+ 33. Minimum Propagation Delay
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Progagation Delay
+ 40. Minimum Progagation Delay
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Practica10                                                        ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 207.0 MHz ; 207.0 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -3.831 ; -28.005       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.615 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.631 ; -16.295               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                      ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.831 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.869      ;
+; -3.751 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.789      ;
+; -3.745 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.783      ;
+; -3.671 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.709      ;
+; -3.670 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.708      ;
+; -3.665 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.703      ;
+; -3.643 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.681      ;
+; -3.591 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.629      ;
+; -3.590 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.628      ;
+; -3.585 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.623      ;
+; -3.563 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.601      ;
+; -3.518 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.556      ;
+; -3.511 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.549      ;
+; -3.510 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.548      ;
+; -3.505 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.543      ;
+; -3.485 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.523      ;
+; -3.483 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.521      ;
+; -3.438 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.476      ;
+; -3.431 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.469      ;
+; -3.430 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.468      ;
+; -3.425 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.463      ;
+; -3.413 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.451      ;
+; -3.405 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.443      ;
+; -3.403 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.441      ;
+; -3.358 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.396      ;
+; -3.350 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.388      ;
+; -3.345 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.383      ;
+; -3.333 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.371      ;
+; -3.325 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.363      ;
+; -3.323 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.361      ;
+; -3.278 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.316      ;
+; -3.270 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.308      ;
+; -3.253 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.291      ;
+; -3.245 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.283      ;
+; -3.243 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.281      ;
+; -3.198 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.236      ;
+; -3.173 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.211      ;
+; -3.165 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.203      ;
+; -3.118 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.156      ;
+; -3.101 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.139      ;
+; -3.101 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.139      ;
+; -3.093 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.131      ;
+; -3.085 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.123      ;
+; -3.015 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.053      ;
+; -3.015 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.053      ;
+; -3.013 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.051      ;
+; -2.940 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.978      ;
+; -2.940 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.978      ;
+; -2.913 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.951      ;
+; -2.913 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.951      ;
+; -2.845 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.883      ;
+; -2.845 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.883      ;
+; -2.845 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.883      ;
+; -2.845 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.883      ;
+; -2.845 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.883      ;
+; -2.845 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.883      ;
+; -2.845 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.883      ;
+; -2.845 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.883      ;
+; -2.788 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.826      ;
+; -2.788 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.826      ;
+; -2.755 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.793      ;
+; -2.755 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.793      ;
+; -2.683 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.721      ;
+; -2.683 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.721      ;
+; -2.062 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.100      ;
+; -1.982 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 3.020      ;
+; -1.902 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.940      ;
+; -1.901 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.939      ;
+; -1.901 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.939      ;
+; -1.901 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.939      ;
+; -1.901 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.939      ;
+; -1.901 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.939      ;
+; -1.797 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.835      ;
+; -1.797 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.835      ;
+; -1.797 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.835      ;
+; -1.797 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.835      ;
+; -1.797 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.835      ;
+; -1.797 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.835      ;
+; -1.797 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.835      ;
+; -1.797 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.835      ;
+; -0.017 ; DetectorFlanco:inst4|estado_act.Esp0  ; DetectorFlanco:inst4|estado_act.Pulso ; clk          ; clk         ; 1.000        ; 0.000      ; 1.055      ;
+; 0.137  ; DetectorFlanco:inst5|estado_act.Esp0  ; DetectorFlanco:inst5|estado_act.Pulso ; clk          ; clk         ; 1.000        ; 0.000      ; 0.901      ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.615 ; DetectorFlanco:inst5|estado_act.Esp0  ; DetectorFlanco:inst5|estado_act.Pulso ; clk          ; clk         ; 0.000        ; 0.000      ; 0.901      ;
+; 0.769 ; DetectorFlanco:inst4|estado_act.Esp0  ; DetectorFlanco:inst4|estado_act.Pulso ; clk          ; clk         ; 0.000        ; 0.000      ; 1.055      ;
+; 1.026 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.312      ;
+; 1.039 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.325      ;
+; 1.204 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.259 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.545      ;
+; 1.460 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.746      ;
+; 1.469 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.755      ;
+; 1.474 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.760      ;
+; 1.520 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.806      ;
+; 1.526 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.812      ;
+; 1.536 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.822      ;
+; 1.540 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.826      ;
+; 1.682 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.968      ;
+; 1.685 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.971      ;
+; 1.685 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.971      ;
+; 1.686 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.972      ;
+; 1.686 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.972      ;
+; 1.686 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.972      ;
+; 1.689 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.975      ;
+; 1.701 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.987      ;
+; 1.769 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.055      ;
+; 1.849 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.135      ;
+; 1.906 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.192      ;
+; 1.954 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.240      ;
+; 1.956 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.242      ;
+; 1.970 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.256      ;
+; 1.978 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.264      ;
+; 1.981 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.267      ;
+; 1.981 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.267      ;
+; 1.982 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.268      ;
+; 1.982 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.268      ;
+; 1.982 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.268      ;
+; 1.986 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.272      ;
+; 1.997 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.283      ;
+; 2.034 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.320      ;
+; 2.036 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.322      ;
+; 2.050 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.336      ;
+; 2.066 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.352      ;
+; 2.114 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.400      ;
+; 2.116 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.402      ;
+; 2.130 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.416      ;
+; 2.130 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.416      ;
+; 2.145 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.431      ;
+; 2.146 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.432      ;
+; 2.194 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.480      ;
+; 2.196 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.482      ;
+; 2.210 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.496      ;
+; 2.226 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.512      ;
+; 2.274 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.560      ;
+; 2.276 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.562      ;
+; 2.306 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.592      ;
+; 2.354 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.640      ;
+; 2.386 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.672      ;
+; 2.674 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.960      ;
+; 2.677 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.963      ;
+; 2.677 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.963      ;
+; 2.678 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.964      ;
+; 2.678 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.964      ;
+; 2.678 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.964      ;
+; 2.780 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.066      ;
+; 2.986 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.272      ;
+; 2.986 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.272      ;
+; 2.986 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.272      ;
+; 2.986 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.272      ;
+; 2.986 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.272      ;
+; 3.147 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.433      ;
+; 3.251 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.537      ;
+; 3.251 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.537      ;
+; 3.251 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.537      ;
+; 3.332 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.618      ;
+; 3.332 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.618      ;
+; 3.333 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.619      ;
+; 3.333 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.619      ;
+; 3.333 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.619      ;
+; 3.374 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.660      ;
+; 3.374 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.660      ;
+; 3.374 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.660      ;
+; 3.374 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.660      ;
+; 3.377 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.663      ;
+; 3.476 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.762      ;
+; 3.476 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.762      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk   ; Rise       ; clk                                   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; ControlAparcamiento:inst|contador[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; ControlAparcamiento:inst|contador[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; ControlAparcamiento:inst|contador[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; ControlAparcamiento:inst|contador[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; ControlAparcamiento:inst|contador[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; ControlAparcamiento:inst|contador[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; ControlAparcamiento:inst|contador[3]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; ControlAparcamiento:inst|contador[3]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; ControlAparcamiento:inst|contador[4]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; ControlAparcamiento:inst|contador[4]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; ControlAparcamiento:inst|contador[5]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; ControlAparcamiento:inst|contador[5]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; ControlAparcamiento:inst|contador[6]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; ControlAparcamiento:inst|contador[6]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; ControlAparcamiento:inst|contador[7]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; ControlAparcamiento:inst|contador[7]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:inst4|estado_act.Esp0  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:inst4|estado_act.Esp0  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:inst4|estado_act.Pulso ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:inst4|estado_act.Pulso ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:inst5|estado_act.Esp0  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:inst5|estado_act.Esp0  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:inst5|estado_act.Pulso ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:inst5|estado_act.Pulso ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst4|estado_act.Esp0|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst4|estado_act.Esp0|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst4|estado_act.Pulso|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst4|estado_act.Pulso|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst5|estado_act.Esp0|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst5|estado_act.Esp0|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst5|estado_act.Pulso|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst5|estado_act.Pulso|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|contador[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|contador[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|contador[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|contador[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|contador[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|contador[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|contador[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|contador[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|contador[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|contador[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|contador[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|contador[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|contador[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|contador[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|contador[7]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|contador[7]|clk                  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; entra     ; clk        ; 5.066 ; 5.066 ; Rise       ; clk             ;
+; max[*]    ; clk        ; 4.716 ; 4.716 ; Rise       ; clk             ;
+;  max[0]   ; clk        ; 4.572 ; 4.572 ; Rise       ; clk             ;
+;  max[1]   ; clk        ; 4.716 ; 4.716 ; Rise       ; clk             ;
+;  max[2]   ; clk        ; 4.403 ; 4.403 ; Rise       ; clk             ;
+;  max[3]   ; clk        ; 4.415 ; 4.415 ; Rise       ; clk             ;
+;  max[4]   ; clk        ; 4.669 ; 4.669 ; Rise       ; clk             ;
+;  max[5]   ; clk        ; 4.390 ; 4.390 ; Rise       ; clk             ;
+;  max[6]   ; clk        ; 4.002 ; 4.002 ; Rise       ; clk             ;
+;  max[7]   ; clk        ; 3.369 ; 3.369 ; Rise       ; clk             ;
+; sale      ; clk        ; 5.207 ; 5.207 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; entra     ; clk        ; -4.817 ; -4.817 ; Rise       ; clk             ;
+; max[*]    ; clk        ; -2.285 ; -2.285 ; Rise       ; clk             ;
+;  max[0]   ; clk        ; -3.488 ; -3.488 ; Rise       ; clk             ;
+;  max[1]   ; clk        ; -3.632 ; -3.632 ; Rise       ; clk             ;
+;  max[2]   ; clk        ; -3.319 ; -3.319 ; Rise       ; clk             ;
+;  max[3]   ; clk        ; -3.331 ; -3.331 ; Rise       ; clk             ;
+;  max[4]   ; clk        ; -3.585 ; -3.585 ; Rise       ; clk             ;
+;  max[5]   ; clk        ; -3.306 ; -3.306 ; Rise       ; clk             ;
+;  max[6]   ; clk        ; -2.918 ; -2.918 ; Rise       ; clk             ;
+;  max[7]   ; clk        ; -2.285 ; -2.285 ; Rise       ; clk             ;
+; sale      ; clk        ; -4.959 ; -4.959 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; disp0[*]  ; clk        ; 8.639  ; 8.639  ; Rise       ; clk             ;
+;  disp0[0] ; clk        ; 8.474  ; 8.474  ; Rise       ; clk             ;
+;  disp0[1] ; clk        ; 8.591  ; 8.591  ; Rise       ; clk             ;
+;  disp0[2] ; clk        ; 8.251  ; 8.251  ; Rise       ; clk             ;
+;  disp0[3] ; clk        ; 8.290  ; 8.290  ; Rise       ; clk             ;
+;  disp0[4] ; clk        ; 8.639  ; 8.639  ; Rise       ; clk             ;
+;  disp0[5] ; clk        ; 8.624  ; 8.624  ; Rise       ; clk             ;
+;  disp0[6] ; clk        ; 8.498  ; 8.498  ; Rise       ; clk             ;
+; disp1[*]  ; clk        ; 8.877  ; 8.877  ; Rise       ; clk             ;
+;  disp1[0] ; clk        ; 8.607  ; 8.607  ; Rise       ; clk             ;
+;  disp1[1] ; clk        ; 8.617  ; 8.617  ; Rise       ; clk             ;
+;  disp1[2] ; clk        ; 8.604  ; 8.604  ; Rise       ; clk             ;
+;  disp1[3] ; clk        ; 8.628  ; 8.628  ; Rise       ; clk             ;
+;  disp1[4] ; clk        ; 8.877  ; 8.877  ; Rise       ; clk             ;
+;  disp1[5] ; clk        ; 8.656  ; 8.656  ; Rise       ; clk             ;
+;  disp1[6] ; clk        ; 8.690  ; 8.690  ; Rise       ; clk             ;
+; led_g     ; clk        ; 10.884 ; 10.884 ; Rise       ; clk             ;
+; led_r     ; clk        ; 11.468 ; 11.468 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; disp0[*]  ; clk        ; 7.914  ; 7.914  ; Rise       ; clk             ;
+;  disp0[0] ; clk        ; 8.106  ; 8.106  ; Rise       ; clk             ;
+;  disp0[1] ; clk        ; 8.231  ; 8.231  ; Rise       ; clk             ;
+;  disp0[2] ; clk        ; 7.914  ; 7.914  ; Rise       ; clk             ;
+;  disp0[3] ; clk        ; 7.923  ; 7.923  ; Rise       ; clk             ;
+;  disp0[4] ; clk        ; 8.266  ; 8.266  ; Rise       ; clk             ;
+;  disp0[5] ; clk        ; 8.269  ; 8.269  ; Rise       ; clk             ;
+;  disp0[6] ; clk        ; 8.147  ; 8.147  ; Rise       ; clk             ;
+; disp1[*]  ; clk        ; 8.170  ; 8.170  ; Rise       ; clk             ;
+;  disp1[0] ; clk        ; 8.197  ; 8.197  ; Rise       ; clk             ;
+;  disp1[1] ; clk        ; 8.171  ; 8.171  ; Rise       ; clk             ;
+;  disp1[2] ; clk        ; 8.170  ; 8.170  ; Rise       ; clk             ;
+;  disp1[3] ; clk        ; 8.182  ; 8.182  ; Rise       ; clk             ;
+;  disp1[4] ; clk        ; 8.430  ; 8.430  ; Rise       ; clk             ;
+;  disp1[5] ; clk        ; 8.218  ; 8.218  ; Rise       ; clk             ;
+;  disp1[6] ; clk        ; 8.248  ; 8.248  ; Rise       ; clk             ;
+; led_g     ; clk        ; 10.290 ; 10.290 ; Rise       ; clk             ;
+; led_r     ; clk        ; 10.874 ; 10.874 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; max[0]     ; led_g       ; 9.562  ; 9.562  ; 9.562  ; 9.562  ;
+; max[0]     ; led_r       ; 10.146 ; 10.146 ; 10.146 ; 10.146 ;
+; max[1]     ; led_g       ; 10.173 ; 10.173 ; 10.173 ; 10.173 ;
+; max[1]     ; led_r       ; 10.757 ; 10.757 ; 10.757 ; 10.757 ;
+; max[2]     ; led_g       ; 10.266 ; 10.266 ; 10.266 ; 10.266 ;
+; max[2]     ; led_r       ; 10.850 ; 10.850 ; 10.850 ; 10.850 ;
+; max[3]     ; led_g       ; 10.472 ; 10.472 ; 10.472 ; 10.472 ;
+; max[3]     ; led_r       ; 11.056 ; 11.056 ; 11.056 ; 11.056 ;
+; max[4]     ; led_g       ; 10.309 ; 10.309 ; 10.309 ; 10.309 ;
+; max[4]     ; led_r       ; 10.893 ; 10.893 ; 10.893 ; 10.893 ;
+; max[5]     ; led_g       ; 10.756 ; 10.756 ; 10.756 ; 10.756 ;
+; max[5]     ; led_r       ; 11.340 ; 11.340 ; 11.340 ; 11.340 ;
+; max[6]     ; led_g       ; 10.778 ; 10.778 ; 10.778 ; 10.778 ;
+; max[6]     ; led_r       ; 11.362 ; 11.362 ; 11.362 ; 11.362 ;
+; max[7]     ; led_g       ; 9.727  ; 9.727  ; 9.727  ; 9.727  ;
+; max[7]     ; led_r       ; 10.311 ; 10.311 ; 10.311 ; 10.311 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------+
+; Minimum Propagation Delay                                    ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; max[0]     ; led_g       ; 9.562  ; 9.562  ; 9.562  ; 9.562  ;
+; max[0]     ; led_r       ; 10.146 ; 10.146 ; 10.146 ; 10.146 ;
+; max[1]     ; led_g       ; 10.173 ; 10.173 ; 10.173 ; 10.173 ;
+; max[1]     ; led_r       ; 10.757 ; 10.757 ; 10.757 ; 10.757 ;
+; max[2]     ; led_g       ; 10.266 ; 10.266 ; 10.266 ; 10.266 ;
+; max[2]     ; led_r       ; 10.850 ; 10.850 ; 10.850 ; 10.850 ;
+; max[3]     ; led_g       ; 10.472 ; 10.472 ; 10.472 ; 10.472 ;
+; max[3]     ; led_r       ; 11.056 ; 11.056 ; 11.056 ; 11.056 ;
+; max[4]     ; led_g       ; 10.309 ; 10.309 ; 10.309 ; 10.309 ;
+; max[4]     ; led_r       ; 10.893 ; 10.893 ; 10.893 ; 10.893 ;
+; max[5]     ; led_g       ; 10.756 ; 10.756 ; 10.756 ; 10.756 ;
+; max[5]     ; led_r       ; 11.340 ; 11.340 ; 11.340 ; 11.340 ;
+; max[6]     ; led_g       ; 10.778 ; 10.778 ; 10.778 ; 10.778 ;
+; max[6]     ; led_r       ; 11.362 ; 11.362 ; 11.362 ; 11.362 ;
+; max[7]     ; led_g       ; 9.727  ; 9.727  ; 9.727  ; 9.727  ;
+; max[7]     ; led_r       ; 10.311 ; 10.311 ; 10.311 ; 10.311 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.852 ; -5.869        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.238 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -13.380               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                      ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.852 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.884      ;
+; -0.817 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.849      ;
+; -0.813 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.845      ;
+; -0.782 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.814      ;
+; -0.780 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.812      ;
+; -0.778 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.810      ;
+; -0.767 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.799      ;
+; -0.747 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.779      ;
+; -0.745 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.777      ;
+; -0.743 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.775      ;
+; -0.732 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.764      ;
+; -0.712 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.744      ;
+; -0.712 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.744      ;
+; -0.710 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.742      ;
+; -0.708 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.740      ;
+; -0.697 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.729      ;
+; -0.697 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.729      ;
+; -0.677 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.709      ;
+; -0.677 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.709      ;
+; -0.675 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.707      ;
+; -0.673 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.705      ;
+; -0.664 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.696      ;
+; -0.662 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.694      ;
+; -0.662 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.694      ;
+; -0.642 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.674      ;
+; -0.641 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.673      ;
+; -0.641 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.673      ;
+; -0.640 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.672      ;
+; -0.638 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.670      ;
+; -0.629 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.661      ;
+; -0.627 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.659      ;
+; -0.627 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.659      ;
+; -0.607 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.639      ;
+; -0.605 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.637      ;
+; -0.602 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.634      ;
+; -0.602 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.634      ;
+; -0.594 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.626      ;
+; -0.592 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.624      ;
+; -0.592 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.624      ;
+; -0.572 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.604      ;
+; -0.569 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.601      ;
+; -0.569 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.601      ;
+; -0.559 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.591      ;
+; -0.557 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.589      ;
+; -0.556 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.588      ;
+; -0.556 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.588      ;
+; -0.537 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.569      ;
+; -0.524 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.556      ;
+; -0.522 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.554      ;
+; -0.521 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.553      ;
+; -0.521 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.553      ;
+; -0.521 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.553      ;
+; -0.521 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.553      ;
+; -0.521 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.553      ;
+; -0.521 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.553      ;
+; -0.521 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.553      ;
+; -0.521 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.553      ;
+; -0.501 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.533      ;
+; -0.501 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.533      ;
+; -0.489 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.521      ;
+; -0.486 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.518      ;
+; -0.486 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.518      ;
+; -0.453 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.485      ;
+; -0.453 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.485      ;
+; -0.200 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.231      ;
+; -0.189 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.220      ;
+; -0.189 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.220      ;
+; -0.189 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.220      ;
+; -0.189 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.220      ;
+; -0.189 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.220      ;
+; -0.189 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.220      ;
+; -0.189 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.220      ;
+; -0.171 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.202      ;
+; -0.171 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.202      ;
+; -0.171 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.202      ;
+; -0.171 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.202      ;
+; -0.171 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.202      ;
+; -0.171 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.202      ;
+; -0.171 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.202      ;
+; -0.171 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.202      ;
+; 0.588  ; DetectorFlanco:inst4|estado_act.Esp0  ; DetectorFlanco:inst4|estado_act.Pulso ; clk          ; clk         ; 1.000        ; 0.000      ; 0.444      ;
+; 0.642  ; DetectorFlanco:inst5|estado_act.Esp0  ; DetectorFlanco:inst5|estado_act.Pulso ; clk          ; clk         ; 1.000        ; 0.000      ; 0.390      ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.238 ; DetectorFlanco:inst5|estado_act.Esp0  ; DetectorFlanco:inst5|estado_act.Pulso ; clk          ; clk         ; 0.000        ; 0.000      ; 0.390      ;
+; 0.292 ; DetectorFlanco:inst4|estado_act.Esp0  ; DetectorFlanco:inst4|estado_act.Pulso ; clk          ; clk         ; 0.000        ; 0.000      ; 0.444      ;
+; 0.377 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.529      ;
+; 0.381 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.533      ;
+; 0.449 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.601      ;
+; 0.458 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.610      ;
+; 0.517 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.669      ;
+; 0.521 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.673      ;
+; 0.540 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.692      ;
+; 0.552 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.704      ;
+; 0.552 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.704      ;
+; 0.554 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.706      ;
+; 0.563 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.715      ;
+; 0.598 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.750      ;
+; 0.633 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.784      ;
+; 0.633 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.785      ;
+; 0.634 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.785      ;
+; 0.634 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.785      ;
+; 0.635 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.786      ;
+; 0.635 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.786      ;
+; 0.635 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.786      ;
+; 0.646 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.797      ;
+; 0.668 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.820      ;
+; 0.678 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.830      ;
+; 0.692 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.844      ;
+; 0.694 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.846      ;
+; 0.703 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.855      ;
+; 0.713 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.865      ;
+; 0.727 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.879      ;
+; 0.729 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.881      ;
+; 0.738 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.890      ;
+; 0.748 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.900      ;
+; 0.762 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.914      ;
+; 0.764 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.916      ;
+; 0.765 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.916      ;
+; 0.766 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.917      ;
+; 0.766 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.917      ;
+; 0.767 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.918      ;
+; 0.767 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.918      ;
+; 0.767 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.918      ;
+; 0.773 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.925      ;
+; 0.778 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.929      ;
+; 0.783 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.935      ;
+; 0.797 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.949      ;
+; 0.799 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.951      ;
+; 0.808 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.960      ;
+; 0.818 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.970      ;
+; 0.832 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.984      ;
+; 0.834 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.986      ;
+; 0.853 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.005      ;
+; 0.867 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.019      ;
+; 0.881 ; DetectorFlanco:inst4|estado_act.Pulso ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.032      ;
+; 0.888 ; ControlAparcamiento:inst|contador[0]  ; ControlAparcamiento:inst|contador[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.040      ;
+; 0.893 ; DetectorFlanco:inst5|estado_act.Pulso ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.044      ;
+; 1.027 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.179      ;
+; 1.028 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.180      ;
+; 1.028 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.180      ;
+; 1.029 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.181      ;
+; 1.029 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.181      ;
+; 1.029 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.181      ;
+; 1.131 ; ControlAparcamiento:inst|contador[7]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.283      ;
+; 1.186 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.338      ;
+; 1.186 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.338      ;
+; 1.186 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.338      ;
+; 1.186 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.338      ;
+; 1.186 ; ControlAparcamiento:inst|contador[5]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.338      ;
+; 1.230 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.382      ;
+; 1.230 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.382      ;
+; 1.231 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.383      ;
+; 1.231 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.383      ;
+; 1.231 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.383      ;
+; 1.246 ; ControlAparcamiento:inst|contador[1]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.398      ;
+; 1.279 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.431      ;
+; 1.279 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.431      ;
+; 1.279 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.431      ;
+; 1.296 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.448      ;
+; 1.296 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.448      ;
+; 1.296 ; ControlAparcamiento:inst|contador[3]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.448      ;
+; 1.313 ; ControlAparcamiento:inst|contador[6]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.465      ;
+; 1.340 ; ControlAparcamiento:inst|contador[4]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.492      ;
+; 1.347 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.499      ;
+; 1.353 ; ControlAparcamiento:inst|contador[2]  ; ControlAparcamiento:inst|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.505      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ControlAparcamiento:inst|contador[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ControlAparcamiento:inst|contador[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ControlAparcamiento:inst|contador[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ControlAparcamiento:inst|contador[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ControlAparcamiento:inst|contador[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ControlAparcamiento:inst|contador[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ControlAparcamiento:inst|contador[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ControlAparcamiento:inst|contador[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ControlAparcamiento:inst|contador[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ControlAparcamiento:inst|contador[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ControlAparcamiento:inst|contador[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ControlAparcamiento:inst|contador[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ControlAparcamiento:inst|contador[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ControlAparcamiento:inst|contador[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ControlAparcamiento:inst|contador[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ControlAparcamiento:inst|contador[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:inst4|estado_act.Esp0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:inst4|estado_act.Esp0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:inst4|estado_act.Pulso ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:inst4|estado_act.Pulso ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:inst5|estado_act.Esp0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:inst5|estado_act.Esp0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DetectorFlanco:inst5|estado_act.Pulso ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DetectorFlanco:inst5|estado_act.Pulso ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst4|estado_act.Esp0|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst4|estado_act.Esp0|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst4|estado_act.Pulso|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst4|estado_act.Pulso|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst5|estado_act.Esp0|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst5|estado_act.Esp0|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst5|estado_act.Pulso|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst5|estado_act.Pulso|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|contador[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|contador[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|contador[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|contador[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|contador[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|contador[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|contador[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|contador[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|contador[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|contador[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|contador[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|contador[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|contador[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|contador[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|contador[7]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|contador[7]|clk                  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; entra     ; clk        ; 2.391 ; 2.391 ; Rise       ; clk             ;
+; max[*]    ; clk        ; 1.352 ; 1.352 ; Rise       ; clk             ;
+;  max[0]   ; clk        ; 1.269 ; 1.269 ; Rise       ; clk             ;
+;  max[1]   ; clk        ; 1.304 ; 1.304 ; Rise       ; clk             ;
+;  max[2]   ; clk        ; 1.198 ; 1.198 ; Rise       ; clk             ;
+;  max[3]   ; clk        ; 1.227 ; 1.227 ; Rise       ; clk             ;
+;  max[4]   ; clk        ; 1.352 ; 1.352 ; Rise       ; clk             ;
+;  max[5]   ; clk        ; 1.249 ; 1.249 ; Rise       ; clk             ;
+;  max[6]   ; clk        ; 1.024 ; 1.024 ; Rise       ; clk             ;
+;  max[7]   ; clk        ; 0.751 ; 0.751 ; Rise       ; clk             ;
+; sale      ; clk        ; 2.409 ; 2.409 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; entra     ; clk        ; -2.250 ; -2.250 ; Rise       ; clk             ;
+; max[*]    ; clk        ; -0.316 ; -0.316 ; Rise       ; clk             ;
+;  max[0]   ; clk        ; -0.834 ; -0.834 ; Rise       ; clk             ;
+;  max[1]   ; clk        ; -0.869 ; -0.869 ; Rise       ; clk             ;
+;  max[2]   ; clk        ; -0.763 ; -0.763 ; Rise       ; clk             ;
+;  max[3]   ; clk        ; -0.792 ; -0.792 ; Rise       ; clk             ;
+;  max[4]   ; clk        ; -0.917 ; -0.917 ; Rise       ; clk             ;
+;  max[5]   ; clk        ; -0.814 ; -0.814 ; Rise       ; clk             ;
+;  max[6]   ; clk        ; -0.589 ; -0.589 ; Rise       ; clk             ;
+;  max[7]   ; clk        ; -0.316 ; -0.316 ; Rise       ; clk             ;
+; sale      ; clk        ; -2.287 ; -2.287 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; disp0[*]  ; clk        ; 4.381 ; 4.381 ; Rise       ; clk             ;
+;  disp0[0] ; clk        ; 4.291 ; 4.291 ; Rise       ; clk             ;
+;  disp0[1] ; clk        ; 4.353 ; 4.353 ; Rise       ; clk             ;
+;  disp0[2] ; clk        ; 4.242 ; 4.242 ; Rise       ; clk             ;
+;  disp0[3] ; clk        ; 4.244 ; 4.244 ; Rise       ; clk             ;
+;  disp0[4] ; clk        ; 4.381 ; 4.381 ; Rise       ; clk             ;
+;  disp0[5] ; clk        ; 4.373 ; 4.373 ; Rise       ; clk             ;
+;  disp0[6] ; clk        ; 4.310 ; 4.310 ; Rise       ; clk             ;
+; disp1[*]  ; clk        ; 4.460 ; 4.460 ; Rise       ; clk             ;
+;  disp1[0] ; clk        ; 4.389 ; 4.389 ; Rise       ; clk             ;
+;  disp1[1] ; clk        ; 4.360 ; 4.360 ; Rise       ; clk             ;
+;  disp1[2] ; clk        ; 4.355 ; 4.355 ; Rise       ; clk             ;
+;  disp1[3] ; clk        ; 4.373 ; 4.373 ; Rise       ; clk             ;
+;  disp1[4] ; clk        ; 4.460 ; 4.460 ; Rise       ; clk             ;
+;  disp1[5] ; clk        ; 4.405 ; 4.405 ; Rise       ; clk             ;
+;  disp1[6] ; clk        ; 4.424 ; 4.424 ; Rise       ; clk             ;
+; led_g     ; clk        ; 5.322 ; 5.322 ; Rise       ; clk             ;
+; led_r     ; clk        ; 5.540 ; 5.540 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; disp0[*]  ; clk        ; 4.127 ; 4.127 ; Rise       ; clk             ;
+;  disp0[0] ; clk        ; 4.172 ; 4.172 ; Rise       ; clk             ;
+;  disp0[1] ; clk        ; 4.244 ; 4.244 ; Rise       ; clk             ;
+;  disp0[2] ; clk        ; 4.127 ; 4.127 ; Rise       ; clk             ;
+;  disp0[3] ; clk        ; 4.131 ; 4.131 ; Rise       ; clk             ;
+;  disp0[4] ; clk        ; 4.266 ; 4.266 ; Rise       ; clk             ;
+;  disp0[5] ; clk        ; 4.266 ; 4.266 ; Rise       ; clk             ;
+;  disp0[6] ; clk        ; 4.213 ; 4.213 ; Rise       ; clk             ;
+; disp1[*]  ; clk        ; 4.200 ; 4.200 ; Rise       ; clk             ;
+;  disp1[0] ; clk        ; 4.230 ; 4.230 ; Rise       ; clk             ;
+;  disp1[1] ; clk        ; 4.202 ; 4.202 ; Rise       ; clk             ;
+;  disp1[2] ; clk        ; 4.200 ; 4.200 ; Rise       ; clk             ;
+;  disp1[3] ; clk        ; 4.213 ; 4.213 ; Rise       ; clk             ;
+;  disp1[4] ; clk        ; 4.304 ; 4.304 ; Rise       ; clk             ;
+;  disp1[5] ; clk        ; 4.249 ; 4.249 ; Rise       ; clk             ;
+;  disp1[6] ; clk        ; 4.269 ; 4.269 ; Rise       ; clk             ;
+; led_g     ; clk        ; 5.101 ; 5.101 ; Rise       ; clk             ;
+; led_r     ; clk        ; 5.319 ; 5.319 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; max[0]     ; led_g       ; 4.358 ; 4.358 ; 4.358 ; 4.358 ;
+; max[0]     ; led_r       ; 4.576 ; 4.576 ; 4.576 ; 4.576 ;
+; max[1]     ; led_g       ; 4.553 ; 4.553 ; 4.553 ; 4.553 ;
+; max[1]     ; led_r       ; 4.771 ; 4.771 ; 4.771 ; 4.771 ;
+; max[2]     ; led_g       ; 4.623 ; 4.623 ; 4.623 ; 4.623 ;
+; max[2]     ; led_r       ; 4.841 ; 4.841 ; 4.841 ; 4.841 ;
+; max[3]     ; led_g       ; 4.712 ; 4.712 ; 4.712 ; 4.712 ;
+; max[3]     ; led_r       ; 4.930 ; 4.930 ; 4.930 ; 4.930 ;
+; max[4]     ; led_g       ; 4.691 ; 4.691 ; 4.691 ; 4.691 ;
+; max[4]     ; led_r       ; 4.909 ; 4.909 ; 4.909 ; 4.909 ;
+; max[5]     ; led_g       ; 4.911 ; 4.911 ; 4.911 ; 4.911 ;
+; max[5]     ; led_r       ; 5.129 ; 5.129 ; 5.129 ; 5.129 ;
+; max[6]     ; led_g       ; 4.803 ; 4.803 ; 4.803 ; 4.803 ;
+; max[6]     ; led_r       ; 5.021 ; 5.021 ; 5.021 ; 5.021 ;
+; max[7]     ; led_g       ; 4.340 ; 4.340 ; 4.340 ; 4.340 ;
+; max[7]     ; led_r       ; 4.558 ; 4.558 ; 4.558 ; 4.558 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; max[0]     ; led_g       ; 4.358 ; 4.358 ; 4.358 ; 4.358 ;
+; max[0]     ; led_r       ; 4.576 ; 4.576 ; 4.576 ; 4.576 ;
+; max[1]     ; led_g       ; 4.553 ; 4.553 ; 4.553 ; 4.553 ;
+; max[1]     ; led_r       ; 4.771 ; 4.771 ; 4.771 ; 4.771 ;
+; max[2]     ; led_g       ; 4.623 ; 4.623 ; 4.623 ; 4.623 ;
+; max[2]     ; led_r       ; 4.841 ; 4.841 ; 4.841 ; 4.841 ;
+; max[3]     ; led_g       ; 4.712 ; 4.712 ; 4.712 ; 4.712 ;
+; max[3]     ; led_r       ; 4.930 ; 4.930 ; 4.930 ; 4.930 ;
+; max[4]     ; led_g       ; 4.691 ; 4.691 ; 4.691 ; 4.691 ;
+; max[4]     ; led_r       ; 4.909 ; 4.909 ; 4.909 ; 4.909 ;
+; max[5]     ; led_g       ; 4.911 ; 4.911 ; 4.911 ; 4.911 ;
+; max[5]     ; led_r       ; 5.129 ; 5.129 ; 5.129 ; 5.129 ;
+; max[6]     ; led_g       ; 4.803 ; 4.803 ; 4.803 ; 4.803 ;
+; max[6]     ; led_r       ; 5.021 ; 5.021 ; 5.021 ; 5.021 ;
+; max[7]     ; led_g       ; 4.340 ; 4.340 ; 4.340 ; 4.340 ;
+; max[7]     ; led_r       ; 4.558 ; 4.558 ; 4.558 ; 4.558 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.831  ; 0.238 ; N/A      ; N/A     ; -1.631              ;
+;  clk             ; -3.831  ; 0.238 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -28.005 ; 0.0   ; 0.0      ; 0.0     ; -16.295             ;
+;  clk             ; -28.005 ; 0.000 ; N/A      ; N/A     ; -16.295             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; entra     ; clk        ; 5.066 ; 5.066 ; Rise       ; clk             ;
+; max[*]    ; clk        ; 4.716 ; 4.716 ; Rise       ; clk             ;
+;  max[0]   ; clk        ; 4.572 ; 4.572 ; Rise       ; clk             ;
+;  max[1]   ; clk        ; 4.716 ; 4.716 ; Rise       ; clk             ;
+;  max[2]   ; clk        ; 4.403 ; 4.403 ; Rise       ; clk             ;
+;  max[3]   ; clk        ; 4.415 ; 4.415 ; Rise       ; clk             ;
+;  max[4]   ; clk        ; 4.669 ; 4.669 ; Rise       ; clk             ;
+;  max[5]   ; clk        ; 4.390 ; 4.390 ; Rise       ; clk             ;
+;  max[6]   ; clk        ; 4.002 ; 4.002 ; Rise       ; clk             ;
+;  max[7]   ; clk        ; 3.369 ; 3.369 ; Rise       ; clk             ;
+; sale      ; clk        ; 5.207 ; 5.207 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; entra     ; clk        ; -2.250 ; -2.250 ; Rise       ; clk             ;
+; max[*]    ; clk        ; -0.316 ; -0.316 ; Rise       ; clk             ;
+;  max[0]   ; clk        ; -0.834 ; -0.834 ; Rise       ; clk             ;
+;  max[1]   ; clk        ; -0.869 ; -0.869 ; Rise       ; clk             ;
+;  max[2]   ; clk        ; -0.763 ; -0.763 ; Rise       ; clk             ;
+;  max[3]   ; clk        ; -0.792 ; -0.792 ; Rise       ; clk             ;
+;  max[4]   ; clk        ; -0.917 ; -0.917 ; Rise       ; clk             ;
+;  max[5]   ; clk        ; -0.814 ; -0.814 ; Rise       ; clk             ;
+;  max[6]   ; clk        ; -0.589 ; -0.589 ; Rise       ; clk             ;
+;  max[7]   ; clk        ; -0.316 ; -0.316 ; Rise       ; clk             ;
+; sale      ; clk        ; -2.287 ; -2.287 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; disp0[*]  ; clk        ; 8.639  ; 8.639  ; Rise       ; clk             ;
+;  disp0[0] ; clk        ; 8.474  ; 8.474  ; Rise       ; clk             ;
+;  disp0[1] ; clk        ; 8.591  ; 8.591  ; Rise       ; clk             ;
+;  disp0[2] ; clk        ; 8.251  ; 8.251  ; Rise       ; clk             ;
+;  disp0[3] ; clk        ; 8.290  ; 8.290  ; Rise       ; clk             ;
+;  disp0[4] ; clk        ; 8.639  ; 8.639  ; Rise       ; clk             ;
+;  disp0[5] ; clk        ; 8.624  ; 8.624  ; Rise       ; clk             ;
+;  disp0[6] ; clk        ; 8.498  ; 8.498  ; Rise       ; clk             ;
+; disp1[*]  ; clk        ; 8.877  ; 8.877  ; Rise       ; clk             ;
+;  disp1[0] ; clk        ; 8.607  ; 8.607  ; Rise       ; clk             ;
+;  disp1[1] ; clk        ; 8.617  ; 8.617  ; Rise       ; clk             ;
+;  disp1[2] ; clk        ; 8.604  ; 8.604  ; Rise       ; clk             ;
+;  disp1[3] ; clk        ; 8.628  ; 8.628  ; Rise       ; clk             ;
+;  disp1[4] ; clk        ; 8.877  ; 8.877  ; Rise       ; clk             ;
+;  disp1[5] ; clk        ; 8.656  ; 8.656  ; Rise       ; clk             ;
+;  disp1[6] ; clk        ; 8.690  ; 8.690  ; Rise       ; clk             ;
+; led_g     ; clk        ; 10.884 ; 10.884 ; Rise       ; clk             ;
+; led_r     ; clk        ; 11.468 ; 11.468 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; disp0[*]  ; clk        ; 4.127 ; 4.127 ; Rise       ; clk             ;
+;  disp0[0] ; clk        ; 4.172 ; 4.172 ; Rise       ; clk             ;
+;  disp0[1] ; clk        ; 4.244 ; 4.244 ; Rise       ; clk             ;
+;  disp0[2] ; clk        ; 4.127 ; 4.127 ; Rise       ; clk             ;
+;  disp0[3] ; clk        ; 4.131 ; 4.131 ; Rise       ; clk             ;
+;  disp0[4] ; clk        ; 4.266 ; 4.266 ; Rise       ; clk             ;
+;  disp0[5] ; clk        ; 4.266 ; 4.266 ; Rise       ; clk             ;
+;  disp0[6] ; clk        ; 4.213 ; 4.213 ; Rise       ; clk             ;
+; disp1[*]  ; clk        ; 4.200 ; 4.200 ; Rise       ; clk             ;
+;  disp1[0] ; clk        ; 4.230 ; 4.230 ; Rise       ; clk             ;
+;  disp1[1] ; clk        ; 4.202 ; 4.202 ; Rise       ; clk             ;
+;  disp1[2] ; clk        ; 4.200 ; 4.200 ; Rise       ; clk             ;
+;  disp1[3] ; clk        ; 4.213 ; 4.213 ; Rise       ; clk             ;
+;  disp1[4] ; clk        ; 4.304 ; 4.304 ; Rise       ; clk             ;
+;  disp1[5] ; clk        ; 4.249 ; 4.249 ; Rise       ; clk             ;
+;  disp1[6] ; clk        ; 4.269 ; 4.269 ; Rise       ; clk             ;
+; led_g     ; clk        ; 5.101 ; 5.101 ; Rise       ; clk             ;
+; led_r     ; clk        ; 5.319 ; 5.319 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Progagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; max[0]     ; led_g       ; 9.562  ; 9.562  ; 9.562  ; 9.562  ;
+; max[0]     ; led_r       ; 10.146 ; 10.146 ; 10.146 ; 10.146 ;
+; max[1]     ; led_g       ; 10.173 ; 10.173 ; 10.173 ; 10.173 ;
+; max[1]     ; led_r       ; 10.757 ; 10.757 ; 10.757 ; 10.757 ;
+; max[2]     ; led_g       ; 10.266 ; 10.266 ; 10.266 ; 10.266 ;
+; max[2]     ; led_r       ; 10.850 ; 10.850 ; 10.850 ; 10.850 ;
+; max[3]     ; led_g       ; 10.472 ; 10.472 ; 10.472 ; 10.472 ;
+; max[3]     ; led_r       ; 11.056 ; 11.056 ; 11.056 ; 11.056 ;
+; max[4]     ; led_g       ; 10.309 ; 10.309 ; 10.309 ; 10.309 ;
+; max[4]     ; led_r       ; 10.893 ; 10.893 ; 10.893 ; 10.893 ;
+; max[5]     ; led_g       ; 10.756 ; 10.756 ; 10.756 ; 10.756 ;
+; max[5]     ; led_r       ; 11.340 ; 11.340 ; 11.340 ; 11.340 ;
+; max[6]     ; led_g       ; 10.778 ; 10.778 ; 10.778 ; 10.778 ;
+; max[6]     ; led_r       ; 11.362 ; 11.362 ; 11.362 ; 11.362 ;
+; max[7]     ; led_g       ; 9.727  ; 9.727  ; 9.727  ; 9.727  ;
+; max[7]     ; led_r       ; 10.311 ; 10.311 ; 10.311 ; 10.311 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; max[0]     ; led_g       ; 4.358 ; 4.358 ; 4.358 ; 4.358 ;
+; max[0]     ; led_r       ; 4.576 ; 4.576 ; 4.576 ; 4.576 ;
+; max[1]     ; led_g       ; 4.553 ; 4.553 ; 4.553 ; 4.553 ;
+; max[1]     ; led_r       ; 4.771 ; 4.771 ; 4.771 ; 4.771 ;
+; max[2]     ; led_g       ; 4.623 ; 4.623 ; 4.623 ; 4.623 ;
+; max[2]     ; led_r       ; 4.841 ; 4.841 ; 4.841 ; 4.841 ;
+; max[3]     ; led_g       ; 4.712 ; 4.712 ; 4.712 ; 4.712 ;
+; max[3]     ; led_r       ; 4.930 ; 4.930 ; 4.930 ; 4.930 ;
+; max[4]     ; led_g       ; 4.691 ; 4.691 ; 4.691 ; 4.691 ;
+; max[4]     ; led_r       ; 4.909 ; 4.909 ; 4.909 ; 4.909 ;
+; max[5]     ; led_g       ; 4.911 ; 4.911 ; 4.911 ; 4.911 ;
+; max[5]     ; led_r       ; 5.129 ; 5.129 ; 5.129 ; 5.129 ;
+; max[6]     ; led_g       ; 4.803 ; 4.803 ; 4.803 ; 4.803 ;
+; max[6]     ; led_r       ; 5.021 ; 5.021 ; 5.021 ; 5.021 ;
+; max[7]     ; led_g       ; 4.340 ; 4.340 ; 4.340 ; 4.340 ;
+; max[7]     ; led_r       ; 4.558 ; 4.558 ; 4.558 ; 4.558 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 478      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 478      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 11    ; 11   ;
+; Unconstrained Input Port Paths  ; 96    ; 96   ;
+; Unconstrained Output Ports      ; 16    ; 16   ;
+; Unconstrained Output Port Paths ; 88    ; 88   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Nov 26 09:52:17 2018
+Info: Command: quartus_sta Practica10 -c Practica10
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Practica10.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.831
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.831       -28.005 clk 
+Info (332146): Worst-case hold slack is 0.615
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.615         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631       -16.295 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.852
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.852        -5.869 clk 
+Info (332146): Worst-case hold slack is 0.238
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.238         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -13.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 459 megabytes
+    Info: Processing ended: Mon Nov 26 09:52:26 2018
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,206 @@
+# Reading E:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Practica9_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying E:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied E:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {H:/Practica9/DetectorFlanco.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DetectorFlanco
+# -- Compiling architecture behavioral of DetectorFlanco
+# vcom -93 -work work {H:/Practica9/DetectorSecuenciaF1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DetectorSecuenciaF1
+# -- Compiling architecture behavioral of DetectorSecuenciaF1
+# 
+# vcom -93 -work work {H:/Practica9/simulation/modelsim/Practica9.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Practica9_vhd_tst
+# -- Compiling architecture Practica9_arch of Practica9_vhd_tst
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  Practica9
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps Practica9 
+# ** Error: (vsim-3170) Could not find 'H:/Practica9/simulation/modelsim/rtl_work.Practica9'.
+# 
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./Practica9_run_msim_rtl_vhdl.do PAUSED at line 13
+vsim work.practica9_vhd_tst
+# vsim work.practica9_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.practica9_vhd_tst(practica9_arch)
+# ** Warning: (vsim-3473) Component instance "i1 : Practica9" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /practica9_vhd_tst File: H:/Practica9/simulation/modelsim/Practica9.vht
+add wave -position end  sim:/practica9_vhd_tst/clk
+add wave -position end  sim:/practica9_vhd_tst/espera
+add wave -position end  sim:/practica9_vhd_tst/p0
+add wave -position end  sim:/practica9_vhd_tst/p1
+add wave -position end  sim:/practica9_vhd_tst/reset_n
+add wave -position end  sim:/practica9_vhd_tst/valid
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: 201706428  Hostname: AA25LE1P08  ProcessID: 11024
+# 
+#           Attempting to use alternate WLF file "./wlft53z5dg".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft53z5dg
+# 
+force -freeze sim:/practica9_vhd_tst/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/practica9_vhd_tst/p0 1 0
+force -freeze sim:/practica9_vhd_tst/p1 1 0
+force -freeze sim:/practica9_vhd_tst/reset_n 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.detectorsecuenciaf1
+# vsim work.detectorsecuenciaf1 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.detectorsecuenciaf1(behavioral)
+# Loading work.detectorflanco(behavioral)
+add wave -position end  sim:/detectorsecuenciaf1/reset_n
+add wave -position end  sim:/detectorsecuenciaf1/clk
+add wave -position end  sim:/detectorsecuenciaf1/p1
+add wave -position end  sim:/detectorsecuenciaf1/p0
+add wave -position end  sim:/detectorsecuenciaf1/s
+add wave -position end  sim:/detectorsecuenciaf1/s2
+add wave -position end  sim:/detectorsecuenciaf1/estado_act
+add wave -position end  sim:/detectorsecuenciaf1/estado_sig
+add wave -position end  sim:/detectorsecuenciaf1/entradas
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: 201706428  Hostname: AA25LE1P08  ProcessID: 11024
+# 
+#           Attempting to use alternate WLF file "./wlftbr63ey".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftbr63ey
+# 
+force -freeze sim:/detectorsecuenciaf1/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/detectorsecuenciaf1/reset_n 0 0
+force -freeze sim:/detectorsecuenciaf1/p1 1 0
+force -freeze sim:/detectorsecuenciaf1/p0 1 0
+run
+noforce sim:/detectorsecuenciaf1/reset_n
+force -freeze sim:/detectorsecuenciaf1/reset_n 1 0
+run
+force -freeze sim:/detectorsecuenciaf1/p0 0 0
+run
+run
+force -freeze sim:/detectorsecuenciaf1/p0 1 0
+run
+force -freeze sim:/detectorsecuenciaf1/p1 0 0
+run
+run
+force -freeze sim:/detectorsecuenciaf1/p1 1 0
+run -continue
+run
+force -freeze sim:/detectorsecuenciaf1/p1 0 0
+run
+run
+force -freeze sim:/detectorsecuenciaf1/p1 0 0
+force -freeze sim:/detectorsecuenciaf1/p0 0 0
+run
+run
+run
+vsim work.detectorflanco
+# vsim work.detectorflanco 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.detectorflanco(behavioral)
+add wave -position end  sim:/detectorflanco/e
+add wave -position end  sim:/detectorflanco/reset_n
+add wave -position end  sim:/detectorflanco/clk
+add wave -position end  sim:/detectorflanco/s
+add wave -position end  sim:/detectorflanco/estado_act
+add wave -position end  sim:/detectorflanco/estado_sig
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: 201706428  Hostname: AA25LE1P08  ProcessID: 11024
+# 
+#           Attempting to use alternate WLF file "./wlft2k1a24".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft2k1a24
+# 
+force -freeze sim:/detectorflanco/clk U 0
+force -freeze sim:/detectorflanco/e 1 0
+force -freeze sim:/detectorflanco/reset_n 1 0
+run
+run
+add wave -position end  sim:/detectorflanco/e
+add wave -position end  sim:/detectorflanco/reset_n
+add wave -position end  sim:/detectorflanco/clk
+add wave -position end  sim:/detectorflanco/s
+add wave -position end  sim:/detectorflanco/estado_act
+add wave -position end  sim:/detectorflanco/estado_sig
+vsim work.detectorflanco
+# vsim work.detectorflanco 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.detectorflanco(behavioral)
+add wave -position end  sim:/detectorflanco/e
+add wave -position end  sim:/detectorflanco/reset_n
+add wave -position end  sim:/detectorflanco/clk
+add wave -position end  sim:/detectorflanco/s
+add wave -position end  sim:/detectorflanco/estado_act
+add wave -position end  sim:/detectorflanco/estado_sig
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: 201706428  Hostname: AA25LE1P08  ProcessID: 11024
+# 
+#           Attempting to use alternate WLF file "./wlftj2qidf".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftj2qidf
+# 
+force -freeze sim:/detectorflanco/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/detectorflanco/e 0 0
+force -freeze sim:/detectorflanco/reset_n 0 0
+force -freeze sim:/detectorflanco/reset_n 1 0
+force -freeze sim:/detectorflanco/reset_n 0 0
+force -freeze sim:/detectorflanco/e 1 0
+run
+run
+force -freeze sim:/detectorflanco/reset_n 1 0
+run
+force -freeze sim:/detectorflanco/e 0 0
+run
+run
+run
+run
+force -freeze sim:/detectorflanco/e 1 0
+run
+run

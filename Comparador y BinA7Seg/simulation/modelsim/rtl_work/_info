@@ -1,0 +1,110 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\Practica4\simulation\modelsim
+Ebina7seg
+Z1 w1538379861
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dH:\Practica4\simulation\modelsim
+Z5 8H:/Practica4/BinA7Seg.vhd
+Z6 FH:/Practica4/BinA7Seg.vhd
+l0
+L6
+VQ22>alNQQRbmUjSW?1M0e1
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1538668182.980000
+Z9 !s90 -reportprogress|300|-93|-work|work|H:/Practica4/BinA7Seg.vhd|
+Z10 !s107 H:/Practica4/BinA7Seg.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 IKYefIU=D1EZ>NY0fZ[Wb0
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 8 bina7seg 0 22 Q22>alNQQRbmUjSW?1M0e1
+l12
+L11
+VAGNFa<jPlQFk@YjZDdXo13
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 S7QLHIj>RUUNF3@zT>Un^3
+!i10b 1
+Ecomparador4bits
+Z13 w1538373508
+R2
+R3
+R4
+Z14 8H:/Practica4/Comparador4Bits.vhd
+Z15 FH:/Practica4/Comparador4Bits.vhd
+l0
+L6
+V:U9c4Pd@Qc6K3dfS_G3890
+R7
+31
+Z16 !s108 1538668183.971000
+Z17 !s90 -reportprogress|300|-93|-work|work|H:/Practica4/Comparador4Bits.vhd|
+Z18 !s107 H:/Practica4/Comparador4Bits.vhd|
+R11
+R12
+!s100 ]JA0eC]_BZZ<dkKLjz?Sj1
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 15 comparador4bits 0 22 :U9c4Pd@Qc6K3dfS_G3890
+l17
+L16
+VGBT7d4fYA@8ml8QnCLTA?1
+R7
+31
+R16
+R17
+R18
+R11
+R12
+!s100 nc??Mi_ZD=[TfbLcF?e7O3
+!i10b 1
+Epractica4_vhd_tst
+Z19 w1538380035
+R2
+R3
+R4
+Z20 8H:/Practica4/simulation/modelsim/Practica4.vht
+Z21 FH:/Practica4/simulation/modelsim/Practica4.vht
+l0
+L30
+Vo=:B8cY@e<gAh]KTCZ7I:1
+!s100 JLfVE=ZMP;OJ]I8HV76QW0
+R7
+31
+!i10b 1
+Z22 !s108 1538668184.462000
+Z23 !s90 -reportprogress|300|-93|-work|work|H:/Practica4/simulation/modelsim/Practica4.vht|
+Z24 !s107 H:/Practica4/simulation/modelsim/Practica4.vht|
+R11
+R12
+Apractica4_arch
+R2
+R3
+DEx4 work 17 practica4_vhd_tst 0 22 o=:B8cY@e<gAh]KTCZ7I:1
+l53
+L32
+V^edOmlCW5a28KPO9ZUVZG1
+!s100 1heg>;cG@Y16:oFJ?;K9Y3
+R7
+31
+!i10b 1
+R22
+R23
+R24
+R11
+R12

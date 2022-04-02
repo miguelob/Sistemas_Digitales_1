@@ -1,0 +1,123 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Practica10_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {Practica10.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity Practica10
+# -- Compiling architecture structure of Practica10
+# 
+# vcom -93 -work work {F:/Practica10/simulation/modelsim/Practica10.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ControlAparcamiento_vhd_tst
+# -- Compiling architecture ControlAparcamiento_arch of ControlAparcamiento_vhd_tst
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /NA=Practica10_vhd.sdo -L cycloneii -L gate_work -L work -voptargs="+acc"  Practica10
+# vsim +transport_int_delays +transport_path_delays -L cycloneii -L gate_work -L work -voptargs=\"+acc\" -sdftyp /NA=Practica10_vhd.sdo -t 1ps Practica10 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.practica10(structure)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading instances from Practica10_vhd.sdo
+# ** Error: (vsim-SDF-3250) Practica10_vhd.sdo(0): Failed to find INSTANCE '/NA'.
+# 
+# ** Error: (vsim-SDF-3894) : Errors occured in reading and resolving instances from compiled SDF file(s).
+# 
+# ** Error: (vsim-SDF-3250) Practica10_vhd.sdo(0): Failed to find INSTANCE '/NA'.
+# 
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./Practica10_run_msim_gate_vhdl.do PAUSED at line 12
+vsim gate_work.controlaparcamiento_vhd_tst
+# vsim gate_work.controlaparcamiento_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.controlaparcamiento_vhd_tst(controlaparcamiento_arch)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.practica10(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+add log -r /*
+run -all
+# ** Error: Error el contador no satura
+#    Time: 10160 ns  Iteration: 0  Instance: /controlaparcamiento_vhd_tst
+# ** Error: Error: el contador cuenta mal hacia abajo
+#    Time: 14660 ns  Iteration: 0  Instance: /controlaparcamiento_vhd_tst
+# ** Error: Fin de la simulacion
+#    Time: 14760 ns  Iteration: 0  Instance: /controlaparcamiento_vhd_tst
+add wave -position end  sim:/controlaparcamiento_vhd_tst/clk
+add wave -position end  sim:/controlaparcamiento_vhd_tst/entra_coche
+add wave -position end  sim:/controlaparcamiento_vhd_tst/libre
+add wave -position end  sim:/controlaparcamiento_vhd_tst/disp0
+add wave -position end  sim:/controlaparcamiento_vhd_tst/disp1
+add wave -position end  sim:/controlaparcamiento_vhd_tst/max_coches
+add wave -position end  sim:/controlaparcamiento_vhd_tst/num_coches
+add wave -position end  sim:/controlaparcamiento_vhd_tst/ocupado
+add wave -position end  sim:/controlaparcamiento_vhd_tst/reset_n
+add wave -position end  sim:/controlaparcamiento_vhd_tst/sale_coche
+# Break key hit 
+# Simulation stop requested.
+# Break key hit 
+# Break key hit 
+run
+run
+run
+run
+run
+# Break key hit 
+run -all
+# Break key hit 
+# Break key hit 
+# Break key hit 
+# Break in Architecture ControlAparcamiento_arch at F:/Practica10/simulation/modelsim/Practica10.vht line 50
+# Break key hit 

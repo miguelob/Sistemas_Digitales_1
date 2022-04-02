@@ -1,0 +1,1281 @@
+TimeQuest Timing Analyzer report for Practica11
+Wed Dec 05 12:40:09 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Minimum Pulse Width: 'clk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'clk'
+ 26. Fast Model Hold: 'clk'
+ 27. Fast Model Minimum Pulse Width: 'clk'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Propagation Delay
+ 33. Minimum Propagation Delay
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Progagation Delay
+ 40. Minimum Progagation Delay
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Practica11                                                        ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 191.94 MHz ; 191.94 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -4.210 ; -162.176      ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.445 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.631 ; -59.065               ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                                                                        ;
++--------+---------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                     ; To Node                                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -4.210 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 5.248      ;
+; -4.144 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 5.182      ;
+; -4.071 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 5.109      ;
+; -4.037 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 5.075      ;
+; -4.017 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 5.055      ;
+; -3.951 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.989      ;
+; -3.885 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.923      ;
+; -3.863 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.901      ;
+; -3.857 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ; clk          ; clk         ; 1.000        ; -0.002     ; 4.893      ;
+; -3.857 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ; clk          ; clk         ; 1.000        ; -0.002     ; 4.893      ;
+; -3.857 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; clk          ; clk         ; 1.000        ; -0.002     ; 4.893      ;
+; -3.844 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[5]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.882      ;
+; -3.840 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ; clk          ; clk         ; 1.000        ; 0.002      ; 4.880      ;
+; -3.812 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.850      ;
+; -3.797 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.835      ;
+; -3.787 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.825      ;
+; -3.778 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.816      ;
+; -3.774 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ; clk          ; clk         ; 1.000        ; 0.002      ; 4.814      ;
+; -3.768 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.806      ;
+; -3.768 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.806      ;
+; -3.768 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.806      ;
+; -3.766 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.804      ;
+; -3.766 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.804      ;
+; -3.766 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.804      ;
+; -3.758 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.796      ;
+; -3.757 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.795      ;
+; -3.732 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.770      ;
+; -3.732 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.770      ;
+; -3.732 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.770      ;
+; -3.728 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[10] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.766      ;
+; -3.728 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[10] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.766      ;
+; -3.728 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[10] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.766      ;
+; -3.724 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.762      ;
+; -3.721 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.759      ;
+; -3.719 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.757      ;
+; -3.716 ; UnidadControl:i_UnidadControl|estado_act.Activo               ; UnidadControl:i_UnidadControl|estado_act.Finalizado             ; clk          ; clk         ; 1.000        ; 0.000      ; 4.754      ;
+; -3.716 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.754      ;
+; -3.713 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ; clk          ; clk         ; 1.000        ; -0.002     ; 4.749      ;
+; -3.713 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ; clk          ; clk         ; 1.000        ; -0.002     ; 4.749      ;
+; -3.713 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; clk          ; clk         ; 1.000        ; -0.002     ; 4.749      ;
+; -3.701 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ; clk          ; clk         ; 1.000        ; 0.002      ; 4.741      ;
+; -3.694 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]  ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; clk          ; clk         ; 1.000        ; -0.006     ; 4.726      ;
+; -3.694 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]  ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; clk          ; clk         ; 1.000        ; -0.006     ; 4.726      ;
+; -3.694 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]  ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; clk          ; clk         ; 1.000        ; -0.006     ; 4.726      ;
+; -3.694 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]  ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; clk          ; clk         ; 1.000        ; -0.006     ; 4.726      ;
+; -3.692 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]  ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ; clk          ; clk         ; 1.000        ; -0.006     ; 4.724      ;
+; -3.692 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]  ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; clk          ; clk         ; 1.000        ; -0.006     ; 4.724      ;
+; -3.692 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]  ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; clk          ; clk         ; 1.000        ; -0.006     ; 4.724      ;
+; -3.691 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.729      ;
+; -3.690 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.728      ;
+; -3.670 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.708      ;
+; -3.667 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ; clk          ; clk         ; 1.000        ; 0.002      ; 4.707      ;
+; -3.653 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.691      ;
+; -3.652 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]  ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; clk          ; clk         ; 1.000        ; -0.006     ; 4.684      ;
+; -3.652 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]  ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; clk          ; clk         ; 1.000        ; -0.006     ; 4.684      ;
+; -3.652 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]  ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; clk          ; clk         ; 1.000        ; -0.006     ; 4.684      ;
+; -3.652 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]  ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; clk          ; clk         ; 1.000        ; -0.006     ; 4.684      ;
+; -3.650 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]  ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ; clk          ; clk         ; 1.000        ; -0.006     ; 4.682      ;
+; -3.650 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]  ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; clk          ; clk         ; 1.000        ; -0.006     ; 4.682      ;
+; -3.650 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]  ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; clk          ; clk         ; 1.000        ; -0.006     ; 4.682      ;
+; -3.648 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.686      ;
+; -3.647 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ; clk          ; clk         ; 1.000        ; 0.002      ; 4.687      ;
+; -3.645 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.683      ;
+; -3.634 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[16]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.672      ;
+; -3.618 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.656      ;
+; -3.614 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.652      ;
+; -3.594 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.632      ;
+; -3.593 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[11] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.631      ;
+; -3.593 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[11] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.631      ;
+; -3.593 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[11] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.631      ;
+; -3.585 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[5]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.623      ;
+; -3.584 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.622      ;
+; -3.580 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.618      ;
+; -3.569 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; clk          ; clk         ; 1.000        ; -0.008     ; 4.599      ;
+; -3.569 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; clk          ; clk         ; 1.000        ; -0.008     ; 4.599      ;
+; -3.569 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; clk          ; clk         ; 1.000        ; -0.008     ; 4.599      ;
+; -3.569 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; clk          ; clk         ; 1.000        ; -0.008     ; 4.599      ;
+; -3.568 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[16]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.606      ;
+; -3.567 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ; clk          ; clk         ; 1.000        ; -0.008     ; 4.597      ;
+; -3.567 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; clk          ; clk         ; 1.000        ; -0.008     ; 4.597      ;
+; -3.567 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; clk          ; clk         ; 1.000        ; -0.008     ; 4.597      ;
+; -3.564 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.602      ;
+; -3.555 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.593      ;
+; -3.555 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.593      ;
+; -3.555 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.593      ;
+; -3.554 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22]   ; clk          ; clk         ; 1.000        ; 0.002      ; 4.594      ;
+; -3.549 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.587      ;
+; -3.546 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.584      ;
+; -3.544 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[8]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.582      ;
+; -3.526 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.564      ;
+; -3.523 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[9]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.561      ;
+; -3.522 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[21]   ; clk          ; clk         ; 1.000        ; 0.002      ; 4.562      ;
+; -3.513 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[11]   ; clk          ; clk         ; 1.000        ; -0.002     ; 4.549      ;
+; -3.513 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ; clk          ; clk         ; 1.000        ; -0.002     ; 4.549      ;
+; -3.512 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[12]   ; clk          ; clk         ; 1.000        ; -0.002     ; 4.548      ;
+; -3.508 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14]   ; clk          ; clk         ; 1.000        ; -0.002     ; 4.544      ;
+; -3.505 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ; clk          ; clk         ; 1.000        ; -0.002     ; 4.541      ;
+; -3.504 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ; clk          ; clk         ; 1.000        ; -0.002     ; 4.540      ;
+; -3.504 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.542      ;
+; -3.504 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.542      ;
++--------+---------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                                                                          ;
++-------+-----------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                       ; To Node                                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[5]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[5]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[8]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[8]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[9]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[9]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UnidadControl:i_UnidadControl|estado_act.Finalizado             ; UnidadControl:i_UnidadControl|estado_act.Finalizado             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UnidadControl:i_UnidadControl|estado_act.Reposo                 ; UnidadControl:i_UnidadControl|estado_act.Reposo                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[0]  ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UnidadControl:i_UnidadControl|estado_act.EspBot                 ; UnidadControl:i_UnidadControl|estado_act.EspBot                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UnidadControl:i_UnidadControl|estado_act.Abierto                ; UnidadControl:i_UnidadControl|estado_act.Abierto                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[0] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[10]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[10]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[11]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[11]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[12]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[12]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[16]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[16]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[21]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[21]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[2]  ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.632 ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[0]  ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.918      ;
+; 0.637 ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.923      ;
+; 0.641 ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.927      ;
+; 0.643 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.929      ;
+; 0.648 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.934      ;
+; 0.663 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.949      ;
+; 0.782 ; UnidadControl:i_UnidadControl|estado_act.EspBot                 ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.068      ;
+; 0.881 ; UnidadControl:i_UnidadControl|estado_act.Finalizado             ; UnidadControl:i_UnidadControl|estado_act.Reposo                 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.167      ;
+; 0.889 ; UnidadControl:i_UnidadControl|estado_act.Reposo                 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.175      ;
+; 1.005 ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.291      ;
+; 1.006 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.292      ;
+; 1.006 ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.292      ;
+; 1.009 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.295      ;
+; 1.011 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.297      ;
+; 1.016 ; UnidadControl:i_UnidadControl|estado_act.Finalizado             ; UnidadControl:i_UnidadControl|estado_act.Abierto                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.302      ;
+; 1.026 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; UnidadControl:i_UnidadControl|estado_act.EspBot                 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.312      ;
+; 1.029 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.315      ;
+; 1.033 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.319      ;
+; 1.114 ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[0]  ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.400      ;
+; 1.133 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[1] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.419      ;
+; 1.207 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.493      ;
+; 1.278 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[1] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.564      ;
+; 1.279 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[1] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.565      ;
+; 1.285 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[0] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.571      ;
+; 1.429 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[0] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.715      ;
+; 1.431 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[0] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.717      ;
+; 1.442 ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[1]  ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.728      ;
+; 1.445 ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[1]  ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.731      ;
+; 1.482 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[2] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.768      ;
+; 1.495 ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[2]  ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.781      ;
+; 1.538 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ; clk          ; clk         ; 0.000        ; 0.006      ; 1.830      ;
+; 1.540 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[21]   ; clk          ; clk         ; 0.000        ; 0.006      ; 1.832      ;
+; 1.551 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22]   ; clk          ; clk         ; 0.000        ; 0.006      ; 1.843      ;
+; 1.618 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[2] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.904      ;
+; 1.628 ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[0] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.913      ;
+; 1.628 ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[1] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.913      ;
+; 1.634 ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[3] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.919      ;
+; 1.650 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[3] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.936      ;
+; 1.664 ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[1]  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.949      ;
+; 1.664 ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[2] ; clk          ; clk         ; 0.000        ; -0.001     ; 1.949      ;
+; 1.665 ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[0]  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.950      ;
+; 1.667 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.951      ;
+; 1.667 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.951      ;
+; 1.667 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.951      ;
+; 1.667 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.951      ;
+; 1.667 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.951      ;
+; 1.667 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.951      ;
+; 1.667 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.951      ;
+; 1.712 ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[2]  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.997      ;
+; 1.845 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.131      ;
+; 1.864 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; clk          ; clk         ; 0.000        ; 0.000      ; 2.150      ;
+; 1.879 ; UnidadControl:i_UnidadControl|estado_act.Abierto                ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.165      ;
+; 1.880 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 0.000        ; 0.004      ; 2.170      ;
+; 1.881 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ; clk          ; clk         ; 0.000        ; 0.004      ; 2.171      ;
+; 1.907 ; UnidadControl:i_UnidadControl|estado_act.Finalizado             ; UnidadControl:i_UnidadControl|estado_act.EspBot                 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.193      ;
+; 1.911 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[10]   ; clk          ; clk         ; 0.000        ; 0.004      ; 2.201      ;
+; 1.912 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]    ; clk          ; clk         ; 0.000        ; 0.004      ; 2.202      ;
+; 1.924 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[5]    ; clk          ; clk         ; 0.000        ; 0.004      ; 2.214      ;
+; 1.924 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]    ; clk          ; clk         ; 0.000        ; 0.004      ; 2.214      ;
++-------+-----------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                                            ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                          ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk   ; Rise       ; clk                                                             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.Abierto                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.Abierto                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.Activo                 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.Activo                 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.EspBot                 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.EspBot                 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.Finalizado             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.Finalizado             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.Reposo                 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.Reposo                 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[3] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[3] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[10]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[10]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[11]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[11]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[12]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[12]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[16]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[16]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[21]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[21]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[5]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[5]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[8]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[8]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[9]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[9]    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                                            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                                              ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; boton     ; clk        ; 6.787 ; 6.787 ; Rise       ; clk             ;
+; ent_p[*]  ; clk        ; 4.395 ; 4.395 ; Rise       ; clk             ;
+;  ent_p[0] ; clk        ; 4.072 ; 4.072 ; Rise       ; clk             ;
+;  ent_p[1] ; clk        ; 4.395 ; 4.395 ; Rise       ; clk             ;
+;  ent_p[2] ; clk        ; 3.928 ; 3.928 ; Rise       ; clk             ;
+;  ent_p[3] ; clk        ; 4.316 ; 4.316 ; Rise       ; clk             ;
+;  ent_p[4] ; clk        ; 4.188 ; 4.188 ; Rise       ; clk             ;
+;  ent_p[5] ; clk        ; 3.962 ; 3.962 ; Rise       ; clk             ;
+;  ent_p[6] ; clk        ; 4.287 ; 4.287 ; Rise       ; clk             ;
+; puerta    ; clk        ; 3.156 ; 3.156 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; boton     ; clk        ; -4.520 ; -4.520 ; Rise       ; clk             ;
+; ent_p[*]  ; clk        ; -3.618 ; -3.618 ; Rise       ; clk             ;
+;  ent_p[0] ; clk        ; -3.618 ; -3.618 ; Rise       ; clk             ;
+;  ent_p[1] ; clk        ; -3.966 ; -3.966 ; Rise       ; clk             ;
+;  ent_p[2] ; clk        ; -3.678 ; -3.678 ; Rise       ; clk             ;
+;  ent_p[3] ; clk        ; -3.629 ; -3.629 ; Rise       ; clk             ;
+;  ent_p[4] ; clk        ; -3.737 ; -3.737 ; Rise       ; clk             ;
+;  ent_p[5] ; clk        ; -3.713 ; -3.713 ; Rise       ; clk             ;
+;  ent_p[6] ; clk        ; -4.025 ; -4.025 ; Rise       ; clk             ;
+; puerta    ; clk        ; -1.001 ; -1.001 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; cnt_min[*]  ; clk        ; 7.773 ; 7.773 ; Rise       ; clk             ;
+;  cnt_min[0] ; clk        ; 7.749 ; 7.749 ; Rise       ; clk             ;
+;  cnt_min[1] ; clk        ; 7.760 ; 7.760 ; Rise       ; clk             ;
+;  cnt_min[2] ; clk        ; 7.757 ; 7.757 ; Rise       ; clk             ;
+;  cnt_min[3] ; clk        ; 7.741 ; 7.741 ; Rise       ; clk             ;
+;  cnt_min[4] ; clk        ; 7.773 ; 7.773 ; Rise       ; clk             ;
+;  cnt_min[5] ; clk        ; 7.729 ; 7.729 ; Rise       ; clk             ;
+;  cnt_min[6] ; clk        ; 7.744 ; 7.744 ; Rise       ; clk             ;
+; cnt_seg[*]  ; clk        ; 7.754 ; 7.754 ; Rise       ; clk             ;
+;  cnt_seg[0] ; clk        ; 7.743 ; 7.743 ; Rise       ; clk             ;
+;  cnt_seg[1] ; clk        ; 7.703 ; 7.703 ; Rise       ; clk             ;
+;  cnt_seg[2] ; clk        ; 7.685 ; 7.685 ; Rise       ; clk             ;
+;  cnt_seg[3] ; clk        ; 7.708 ; 7.708 ; Rise       ; clk             ;
+;  cnt_seg[4] ; clk        ; 7.754 ; 7.754 ; Rise       ; clk             ;
+;  cnt_seg[5] ; clk        ; 7.736 ; 7.736 ; Rise       ; clk             ;
+;  cnt_seg[6] ; clk        ; 7.342 ; 7.342 ; Rise       ; clk             ;
+; fin         ; clk        ; 8.100 ; 8.100 ; Rise       ; clk             ;
+; horno_on    ; clk        ; 7.771 ; 7.771 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; cnt_min[*]  ; clk        ; 7.729 ; 7.729 ; Rise       ; clk             ;
+;  cnt_min[0] ; clk        ; 7.749 ; 7.749 ; Rise       ; clk             ;
+;  cnt_min[1] ; clk        ; 7.760 ; 7.760 ; Rise       ; clk             ;
+;  cnt_min[2] ; clk        ; 7.757 ; 7.757 ; Rise       ; clk             ;
+;  cnt_min[3] ; clk        ; 7.741 ; 7.741 ; Rise       ; clk             ;
+;  cnt_min[4] ; clk        ; 7.773 ; 7.773 ; Rise       ; clk             ;
+;  cnt_min[5] ; clk        ; 7.729 ; 7.729 ; Rise       ; clk             ;
+;  cnt_min[6] ; clk        ; 7.744 ; 7.744 ; Rise       ; clk             ;
+; cnt_seg[*]  ; clk        ; 7.342 ; 7.342 ; Rise       ; clk             ;
+;  cnt_seg[0] ; clk        ; 7.743 ; 7.743 ; Rise       ; clk             ;
+;  cnt_seg[1] ; clk        ; 7.703 ; 7.703 ; Rise       ; clk             ;
+;  cnt_seg[2] ; clk        ; 7.685 ; 7.685 ; Rise       ; clk             ;
+;  cnt_seg[3] ; clk        ; 7.708 ; 7.708 ; Rise       ; clk             ;
+;  cnt_seg[4] ; clk        ; 7.754 ; 7.754 ; Rise       ; clk             ;
+;  cnt_seg[5] ; clk        ; 7.736 ; 7.736 ; Rise       ; clk             ;
+;  cnt_seg[6] ; clk        ; 7.342 ; 7.342 ; Rise       ; clk             ;
+; fin         ; clk        ; 8.100 ; 8.100 ; Rise       ; clk             ;
+; horno_on    ; clk        ; 7.771 ; 7.771 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; puerta     ; abierta     ; 6.381 ;    ;    ; 6.381 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; puerta     ; abierta     ; 6.381 ;    ;    ; 6.381 ;
++------------+-------------+-------+----+----+-------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -1.105 ; -34.329       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -48.380               ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                                                                        ;
++--------+---------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                     ; To Node                                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.105 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.137      ;
+; -1.078 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.110      ;
+; -1.064 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; -0.001     ; 2.095      ;
+; -1.039 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.071      ;
+; -1.006 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.038      ;
+; -0.974 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.006      ;
+; -0.960 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ; clk          ; clk         ; 1.000        ; 0.003      ; 1.995      ;
+; -0.950 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.983      ;
+; -0.947 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.979      ;
+; -0.933 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ; clk          ; clk         ; 1.000        ; -0.001     ; 1.964      ;
+; -0.933 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ; clk          ; clk         ; 1.000        ; 0.003      ; 1.968      ;
+; -0.924 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[5]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.956      ;
+; -0.923 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.956      ;
+; -0.919 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ; clk          ; clk         ; 1.000        ; 0.002      ; 1.953      ;
+; -0.909 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.941      ;
+; -0.908 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.940      ;
+; -0.894 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ; clk          ; clk         ; 1.000        ; 0.003      ; 1.929      ;
+; -0.888 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.921      ;
+; -0.884 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.917      ;
+; -0.875 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.907      ;
+; -0.872 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.904      ;
+; -0.867 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.900      ;
+; -0.861 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ; clk          ; clk         ; 1.000        ; 0.003      ; 1.896      ;
+; -0.861 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.894      ;
+; -0.851 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.884      ;
+; -0.849 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.882      ;
+; -0.847 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.879      ;
+; -0.842 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22]   ; clk          ; clk         ; 1.000        ; 0.003      ; 1.877      ;
+; -0.841 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.873      ;
+; -0.840 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.873      ;
+; -0.834 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]  ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.861      ;
+; -0.834 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]  ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.861      ;
+; -0.834 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]  ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.861      ;
+; -0.833 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]  ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.860      ;
+; -0.833 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]  ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.860      ;
+; -0.833 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]  ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.860      ;
+; -0.833 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]  ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.860      ;
+; -0.826 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.858      ;
+; -0.823 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]  ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.850      ;
+; -0.823 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]  ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.850      ;
+; -0.823 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]  ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.850      ;
+; -0.822 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.855      ;
+; -0.822 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.855      ;
+; -0.822 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]  ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.849      ;
+; -0.822 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]  ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.849      ;
+; -0.822 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]  ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.849      ;
+; -0.822 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]  ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.849      ;
+; -0.821 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[21]   ; clk          ; clk         ; 1.000        ; 0.003      ; 1.856      ;
+; -0.819 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ; clk          ; clk         ; 1.000        ; -0.002     ; 1.849      ;
+; -0.819 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; clk          ; clk         ; 1.000        ; -0.002     ; 1.849      ;
+; -0.818 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ; clk          ; clk         ; 1.000        ; -0.002     ; 1.848      ;
+; -0.818 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[16]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.851      ;
+; -0.818 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.851      ;
+; -0.815 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22]   ; clk          ; clk         ; 1.000        ; 0.003      ; 1.850      ;
+; -0.808 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.840      ;
+; -0.806 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[8]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.838      ;
+; -0.805 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ; clk          ; clk         ; 1.000        ; -0.008     ; 1.829      ;
+; -0.805 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; clk          ; clk         ; 1.000        ; -0.008     ; 1.829      ;
+; -0.805 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; clk          ; clk         ; 1.000        ; -0.008     ; 1.829      ;
+; -0.804 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; clk          ; clk         ; 1.000        ; -0.008     ; 1.828      ;
+; -0.804 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; clk          ; clk         ; 1.000        ; -0.008     ; 1.828      ;
+; -0.804 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; clk          ; clk         ; 1.000        ; -0.008     ; 1.828      ;
+; -0.804 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; clk          ; clk         ; 1.000        ; -0.008     ; 1.828      ;
+; -0.801 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.834      ;
+; -0.801 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22]   ; clk          ; clk         ; 1.000        ; 0.002      ; 1.835      ;
+; -0.794 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[21]   ; clk          ; clk         ; 1.000        ; 0.003      ; 1.829      ;
+; -0.793 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[5]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.825      ;
+; -0.792 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ; clk          ; clk         ; 1.000        ; -0.002     ; 1.822      ;
+; -0.792 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; clk          ; clk         ; 1.000        ; -0.002     ; 1.822      ;
+; -0.791 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ; clk          ; clk         ; 1.000        ; -0.002     ; 1.821      ;
+; -0.791 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[16]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.824      ;
+; -0.791 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.824      ;
+; -0.789 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.822      ;
+; -0.783 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[9]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.815      ;
+; -0.783 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.816      ;
+; -0.780 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[21]   ; clk          ; clk         ; 1.000        ; 0.002      ; 1.814      ;
+; -0.779 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[5]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ; clk          ; clk         ; 1.000        ; 0.003      ; 1.814      ;
+; -0.778 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ; clk          ; clk         ; 1.000        ; -0.008     ; 1.802      ;
+; -0.778 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; clk          ; clk         ; 1.000        ; -0.008     ; 1.802      ;
+; -0.778 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; clk          ; clk         ; 1.000        ; -0.008     ; 1.802      ;
+; -0.777 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.810      ;
+; -0.777 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.810      ;
+; -0.777 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[16]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.809      ;
+; -0.777 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.809      ;
+; -0.777 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; clk          ; clk         ; 1.000        ; -0.008     ; 1.801      ;
+; -0.777 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; clk          ; clk         ; 1.000        ; -0.008     ; 1.801      ;
+; -0.777 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; clk          ; clk         ; 1.000        ; -0.008     ; 1.801      ;
+; -0.777 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; clk          ; clk         ; 1.000        ; -0.008     ; 1.801      ;
+; -0.776 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22]   ; clk          ; clk         ; 1.000        ; 0.003      ; 1.811      ;
+; -0.776 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.809      ;
+; -0.769 ; UnidadControl:i_UnidadControl|estado_act.Activo               ; UnidadControl:i_UnidadControl|estado_act.Finalizado             ; clk          ; clk         ; 1.000        ; 0.000      ; 1.801      ;
+; -0.769 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[5]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.802      ;
+; -0.769 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.802      ;
+; -0.769 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.802      ;
+; -0.768 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]  ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.801      ;
+; -0.768 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23] ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.801      ;
+; -0.763 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.790      ;
+; -0.763 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.790      ;
+; -0.763 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.790      ;
+; -0.762 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; clk          ; clk         ; 1.000        ; -0.005     ; 1.789      ;
++--------+---------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                                                                          ;
++-------+-----------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                       ; To Node                                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[5]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[5]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[8]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[8]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[9]    ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[9]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UnidadControl:i_UnidadControl|estado_act.Finalizado             ; UnidadControl:i_UnidadControl|estado_act.Finalizado             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UnidadControl:i_UnidadControl|estado_act.Reposo                 ; UnidadControl:i_UnidadControl|estado_act.Reposo                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[0]  ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UnidadControl:i_UnidadControl|estado_act.EspBot                 ; UnidadControl:i_UnidadControl|estado_act.EspBot                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UnidadControl:i_UnidadControl|estado_act.Abierto                ; UnidadControl:i_UnidadControl|estado_act.Abierto                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[0] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[10]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[10]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[11]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[11]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[12]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[12]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[16]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[16]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[21]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[21]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[2]  ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.247 ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.399      ;
+; 0.247 ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[0]  ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.399      ;
+; 0.249 ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.401      ;
+; 0.250 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.402      ;
+; 0.255 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.407      ;
+; 0.264 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.416      ;
+; 0.300 ; UnidadControl:i_UnidadControl|estado_act.EspBot                 ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.452      ;
+; 0.335 ; UnidadControl:i_UnidadControl|estado_act.Finalizado             ; UnidadControl:i_UnidadControl|estado_act.Reposo                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.487      ;
+; 0.368 ; UnidadControl:i_UnidadControl|estado_act.Reposo                 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.520      ;
+; 0.375 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; UnidadControl:i_UnidadControl|estado_act.EspBot                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.527      ;
+; 0.377 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.529      ;
+; 0.377 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.529      ;
+; 0.378 ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.530      ;
+; 0.379 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.531      ;
+; 0.379 ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.531      ;
+; 0.381 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.533      ;
+; 0.382 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.534      ;
+; 0.388 ; UnidadControl:i_UnidadControl|estado_act.Finalizado             ; UnidadControl:i_UnidadControl|estado_act.Abierto                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.540      ;
+; 0.417 ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[0]  ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.569      ;
+; 0.427 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[1] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.579      ;
+; 0.450 ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.602      ;
+; 0.473 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[1] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.625      ;
+; 0.475 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[1] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.627      ;
+; 0.479 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[0] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.631      ;
+; 0.525 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[0] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.677      ;
+; 0.526 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[0] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.678      ;
+; 0.543 ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[1]  ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.695      ;
+; 0.545 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[2] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.697      ;
+; 0.549 ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[1]  ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.701      ;
+; 0.549 ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[2]  ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.701      ;
+; 0.569 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22]   ; clk          ; clk         ; 0.000        ; 0.007      ; 0.728      ;
+; 0.571 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ; clk          ; clk         ; 0.000        ; 0.007      ; 0.730      ;
+; 0.573 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[21]   ; clk          ; clk         ; 0.000        ; 0.007      ; 0.732      ;
+; 0.589 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[2] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.741      ;
+; 0.592 ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[3] ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.744      ;
+; 0.644 ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.796      ;
+; 0.644 ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.796      ;
+; 0.647 ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.799      ;
+; 0.649 ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.801      ;
+; 0.649 ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.801      ;
+; 0.654 ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.806      ;
+; 0.678 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.830      ;
+; 0.695 ; UnidadControl:i_UnidadControl|estado_act.Abierto                ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.847      ;
+; 0.702 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; UnidadControl:i_UnidadControl|estado_act.Abierto                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.854      ;
+; 0.704 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ; clk          ; clk         ; 0.000        ; -0.001     ; 0.855      ;
+; 0.704 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ; clk          ; clk         ; 0.000        ; -0.001     ; 0.855      ;
+; 0.704 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ; clk          ; clk         ; 0.000        ; -0.001     ; 0.855      ;
+; 0.704 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ; clk          ; clk         ; 0.000        ; -0.001     ; 0.855      ;
+; 0.704 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ; clk          ; clk         ; 0.000        ; -0.001     ; 0.855      ;
+; 0.704 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ; clk          ; clk         ; 0.000        ; -0.001     ; 0.855      ;
+; 0.704 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ; clk          ; clk         ; 0.000        ; -0.001     ; 0.855      ;
+; 0.704 ; UnidadControl:i_UnidadControl|estado_act.Finalizado             ; UnidadControl:i_UnidadControl|estado_act.EspBot                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.856      ;
+; 0.706 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.858      ;
+; 0.722 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]    ; clk          ; clk         ; 0.000        ; 0.005      ; 0.879      ;
+; 0.722 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[10]   ; clk          ; clk         ; 0.000        ; 0.005      ; 0.879      ;
+; 0.722 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ; clk          ; clk         ; 0.000        ; 0.004      ; 0.878      ;
+; 0.723 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ; clk          ; clk         ; 0.000        ; 0.004      ; 0.879      ;
+; 0.728 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[5]    ; clk          ; clk         ; 0.000        ; 0.004      ; 0.884      ;
+; 0.728 ; UnidadControl:i_UnidadControl|estado_act.Activo                 ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]    ; clk          ; clk         ; 0.000        ; 0.004      ; 0.884      ;
++-------+-----------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                                            ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                          ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.Abierto                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.Abierto                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.Activo                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.Activo                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.CargaMin               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.CargaSeg               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.EspBot                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.EspBot                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.Finalizado             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.Finalizado             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.Reposo                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; UnidadControl:i_UnidadControl|estado_act.Reposo                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst7|contador[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod10:inst8|contador[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst10|contador[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorDescMod6:inst9|contador[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[10]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[10]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[11]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[11]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[12]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[12]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[13]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[14]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[15]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[16]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[16]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[17]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[18]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[19]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[20]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[21]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[21]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[22]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[23]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[24]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[25]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[8]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[8]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[9]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; temporizador:i_temporizador|ContadorMod50M:inst3|contador[9]    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                                            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                                              ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; boton     ; clk        ; 2.855 ; 2.855 ; Rise       ; clk             ;
+; ent_p[*]  ; clk        ; 2.018 ; 2.018 ; Rise       ; clk             ;
+;  ent_p[0] ; clk        ; 1.894 ; 1.894 ; Rise       ; clk             ;
+;  ent_p[1] ; clk        ; 2.018 ; 2.018 ; Rise       ; clk             ;
+;  ent_p[2] ; clk        ; 1.803 ; 1.803 ; Rise       ; clk             ;
+;  ent_p[3] ; clk        ; 1.970 ; 1.970 ; Rise       ; clk             ;
+;  ent_p[4] ; clk        ; 1.888 ; 1.888 ; Rise       ; clk             ;
+;  ent_p[5] ; clk        ; 1.834 ; 1.834 ; Rise       ; clk             ;
+;  ent_p[6] ; clk        ; 1.954 ; 1.954 ; Rise       ; clk             ;
+; puerta    ; clk        ; 0.659 ; 0.659 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; boton     ; clk        ; -2.042 ; -2.042 ; Rise       ; clk             ;
+; ent_p[*]  ; clk        ; -1.647 ; -1.647 ; Rise       ; clk             ;
+;  ent_p[0] ; clk        ; -1.647 ; -1.647 ; Rise       ; clk             ;
+;  ent_p[1] ; clk        ; -1.791 ; -1.791 ; Rise       ; clk             ;
+;  ent_p[2] ; clk        ; -1.647 ; -1.647 ; Rise       ; clk             ;
+;  ent_p[3] ; clk        ; -1.651 ; -1.651 ; Rise       ; clk             ;
+;  ent_p[4] ; clk        ; -1.731 ; -1.731 ; Rise       ; clk             ;
+;  ent_p[5] ; clk        ; -1.677 ; -1.677 ; Rise       ; clk             ;
+;  ent_p[6] ; clk        ; -1.821 ; -1.821 ; Rise       ; clk             ;
+; puerta    ; clk        ; 0.141  ; 0.141  ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; cnt_min[*]  ; clk        ; 4.070 ; 4.070 ; Rise       ; clk             ;
+;  cnt_min[0] ; clk        ; 4.061 ; 4.061 ; Rise       ; clk             ;
+;  cnt_min[1] ; clk        ; 4.054 ; 4.054 ; Rise       ; clk             ;
+;  cnt_min[2] ; clk        ; 4.063 ; 4.063 ; Rise       ; clk             ;
+;  cnt_min[3] ; clk        ; 4.046 ; 4.046 ; Rise       ; clk             ;
+;  cnt_min[4] ; clk        ; 4.070 ; 4.070 ; Rise       ; clk             ;
+;  cnt_min[5] ; clk        ; 4.044 ; 4.044 ; Rise       ; clk             ;
+;  cnt_min[6] ; clk        ; 4.054 ; 4.054 ; Rise       ; clk             ;
+; cnt_seg[*]  ; clk        ; 4.058 ; 4.058 ; Rise       ; clk             ;
+;  cnt_seg[0] ; clk        ; 4.058 ; 4.058 ; Rise       ; clk             ;
+;  cnt_seg[1] ; clk        ; 4.021 ; 4.021 ; Rise       ; clk             ;
+;  cnt_seg[2] ; clk        ; 4.007 ; 4.007 ; Rise       ; clk             ;
+;  cnt_seg[3] ; clk        ; 4.024 ; 4.024 ; Rise       ; clk             ;
+;  cnt_seg[4] ; clk        ; 4.051 ; 4.051 ; Rise       ; clk             ;
+;  cnt_seg[5] ; clk        ; 4.036 ; 4.036 ; Rise       ; clk             ;
+;  cnt_seg[6] ; clk        ; 3.869 ; 3.869 ; Rise       ; clk             ;
+; fin         ; clk        ; 4.204 ; 4.204 ; Rise       ; clk             ;
+; horno_on    ; clk        ; 4.071 ; 4.071 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; cnt_min[*]  ; clk        ; 4.044 ; 4.044 ; Rise       ; clk             ;
+;  cnt_min[0] ; clk        ; 4.061 ; 4.061 ; Rise       ; clk             ;
+;  cnt_min[1] ; clk        ; 4.054 ; 4.054 ; Rise       ; clk             ;
+;  cnt_min[2] ; clk        ; 4.063 ; 4.063 ; Rise       ; clk             ;
+;  cnt_min[3] ; clk        ; 4.046 ; 4.046 ; Rise       ; clk             ;
+;  cnt_min[4] ; clk        ; 4.070 ; 4.070 ; Rise       ; clk             ;
+;  cnt_min[5] ; clk        ; 4.044 ; 4.044 ; Rise       ; clk             ;
+;  cnt_min[6] ; clk        ; 4.054 ; 4.054 ; Rise       ; clk             ;
+; cnt_seg[*]  ; clk        ; 3.869 ; 3.869 ; Rise       ; clk             ;
+;  cnt_seg[0] ; clk        ; 4.058 ; 4.058 ; Rise       ; clk             ;
+;  cnt_seg[1] ; clk        ; 4.021 ; 4.021 ; Rise       ; clk             ;
+;  cnt_seg[2] ; clk        ; 4.007 ; 4.007 ; Rise       ; clk             ;
+;  cnt_seg[3] ; clk        ; 4.024 ; 4.024 ; Rise       ; clk             ;
+;  cnt_seg[4] ; clk        ; 4.051 ; 4.051 ; Rise       ; clk             ;
+;  cnt_seg[5] ; clk        ; 4.036 ; 4.036 ; Rise       ; clk             ;
+;  cnt_seg[6] ; clk        ; 3.869 ; 3.869 ; Rise       ; clk             ;
+; fin         ; clk        ; 4.204 ; 4.204 ; Rise       ; clk             ;
+; horno_on    ; clk        ; 4.071 ; 4.071 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; puerta     ; abierta     ; 3.043 ;    ;    ; 3.043 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; puerta     ; abierta     ; 3.043 ;    ;    ; 3.043 ;
++------------+-------------+-------+----+----+-------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -4.210   ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  clk             ; -4.210   ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -162.176 ; 0.0   ; 0.0      ; 0.0     ; -59.065             ;
+;  clk             ; -162.176 ; 0.000 ; N/A      ; N/A     ; -59.065             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; boton     ; clk        ; 6.787 ; 6.787 ; Rise       ; clk             ;
+; ent_p[*]  ; clk        ; 4.395 ; 4.395 ; Rise       ; clk             ;
+;  ent_p[0] ; clk        ; 4.072 ; 4.072 ; Rise       ; clk             ;
+;  ent_p[1] ; clk        ; 4.395 ; 4.395 ; Rise       ; clk             ;
+;  ent_p[2] ; clk        ; 3.928 ; 3.928 ; Rise       ; clk             ;
+;  ent_p[3] ; clk        ; 4.316 ; 4.316 ; Rise       ; clk             ;
+;  ent_p[4] ; clk        ; 4.188 ; 4.188 ; Rise       ; clk             ;
+;  ent_p[5] ; clk        ; 3.962 ; 3.962 ; Rise       ; clk             ;
+;  ent_p[6] ; clk        ; 4.287 ; 4.287 ; Rise       ; clk             ;
+; puerta    ; clk        ; 3.156 ; 3.156 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; boton     ; clk        ; -2.042 ; -2.042 ; Rise       ; clk             ;
+; ent_p[*]  ; clk        ; -1.647 ; -1.647 ; Rise       ; clk             ;
+;  ent_p[0] ; clk        ; -1.647 ; -1.647 ; Rise       ; clk             ;
+;  ent_p[1] ; clk        ; -1.791 ; -1.791 ; Rise       ; clk             ;
+;  ent_p[2] ; clk        ; -1.647 ; -1.647 ; Rise       ; clk             ;
+;  ent_p[3] ; clk        ; -1.651 ; -1.651 ; Rise       ; clk             ;
+;  ent_p[4] ; clk        ; -1.731 ; -1.731 ; Rise       ; clk             ;
+;  ent_p[5] ; clk        ; -1.677 ; -1.677 ; Rise       ; clk             ;
+;  ent_p[6] ; clk        ; -1.821 ; -1.821 ; Rise       ; clk             ;
+; puerta    ; clk        ; 0.141  ; 0.141  ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; cnt_min[*]  ; clk        ; 7.773 ; 7.773 ; Rise       ; clk             ;
+;  cnt_min[0] ; clk        ; 7.749 ; 7.749 ; Rise       ; clk             ;
+;  cnt_min[1] ; clk        ; 7.760 ; 7.760 ; Rise       ; clk             ;
+;  cnt_min[2] ; clk        ; 7.757 ; 7.757 ; Rise       ; clk             ;
+;  cnt_min[3] ; clk        ; 7.741 ; 7.741 ; Rise       ; clk             ;
+;  cnt_min[4] ; clk        ; 7.773 ; 7.773 ; Rise       ; clk             ;
+;  cnt_min[5] ; clk        ; 7.729 ; 7.729 ; Rise       ; clk             ;
+;  cnt_min[6] ; clk        ; 7.744 ; 7.744 ; Rise       ; clk             ;
+; cnt_seg[*]  ; clk        ; 7.754 ; 7.754 ; Rise       ; clk             ;
+;  cnt_seg[0] ; clk        ; 7.743 ; 7.743 ; Rise       ; clk             ;
+;  cnt_seg[1] ; clk        ; 7.703 ; 7.703 ; Rise       ; clk             ;
+;  cnt_seg[2] ; clk        ; 7.685 ; 7.685 ; Rise       ; clk             ;
+;  cnt_seg[3] ; clk        ; 7.708 ; 7.708 ; Rise       ; clk             ;
+;  cnt_seg[4] ; clk        ; 7.754 ; 7.754 ; Rise       ; clk             ;
+;  cnt_seg[5] ; clk        ; 7.736 ; 7.736 ; Rise       ; clk             ;
+;  cnt_seg[6] ; clk        ; 7.342 ; 7.342 ; Rise       ; clk             ;
+; fin         ; clk        ; 8.100 ; 8.100 ; Rise       ; clk             ;
+; horno_on    ; clk        ; 7.771 ; 7.771 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; cnt_min[*]  ; clk        ; 4.044 ; 4.044 ; Rise       ; clk             ;
+;  cnt_min[0] ; clk        ; 4.061 ; 4.061 ; Rise       ; clk             ;
+;  cnt_min[1] ; clk        ; 4.054 ; 4.054 ; Rise       ; clk             ;
+;  cnt_min[2] ; clk        ; 4.063 ; 4.063 ; Rise       ; clk             ;
+;  cnt_min[3] ; clk        ; 4.046 ; 4.046 ; Rise       ; clk             ;
+;  cnt_min[4] ; clk        ; 4.070 ; 4.070 ; Rise       ; clk             ;
+;  cnt_min[5] ; clk        ; 4.044 ; 4.044 ; Rise       ; clk             ;
+;  cnt_min[6] ; clk        ; 4.054 ; 4.054 ; Rise       ; clk             ;
+; cnt_seg[*]  ; clk        ; 3.869 ; 3.869 ; Rise       ; clk             ;
+;  cnt_seg[0] ; clk        ; 4.058 ; 4.058 ; Rise       ; clk             ;
+;  cnt_seg[1] ; clk        ; 4.021 ; 4.021 ; Rise       ; clk             ;
+;  cnt_seg[2] ; clk        ; 4.007 ; 4.007 ; Rise       ; clk             ;
+;  cnt_seg[3] ; clk        ; 4.024 ; 4.024 ; Rise       ; clk             ;
+;  cnt_seg[4] ; clk        ; 4.051 ; 4.051 ; Rise       ; clk             ;
+;  cnt_seg[5] ; clk        ; 4.036 ; 4.036 ; Rise       ; clk             ;
+;  cnt_seg[6] ; clk        ; 3.869 ; 3.869 ; Rise       ; clk             ;
+; fin         ; clk        ; 4.204 ; 4.204 ; Rise       ; clk             ;
+; horno_on    ; clk        ; 4.071 ; 4.071 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Progagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; puerta     ; abierta     ; 6.381 ;    ;    ; 6.381 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Progagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; puerta     ; abierta     ; 3.043 ;    ;    ; 3.043 ;
++------------+-------------+-------+----+----+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 1788     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 1788     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 76    ; 76   ;
+; Unconstrained Output Ports      ; 17    ; 17   ;
+; Unconstrained Output Port Paths ; 17    ; 17   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Dec 05 12:39:56 2018
+Info: Command: quartus_sta Practica11 -c Practica11
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Practica11.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -4.210
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -4.210      -162.176 clk 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631       -59.065 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.105
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.105       -34.329 clk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -48.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4557 megabytes
+    Info: Processing ended: Wed Dec 05 12:40:09 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:01
+
+

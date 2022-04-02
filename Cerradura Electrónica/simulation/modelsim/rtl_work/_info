@@ -1,0 +1,110 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\Practica9\simulation\modelsim
+Edetectorflanco
+Z1 w1542803338
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dH:\Practica9\simulation\modelsim
+Z5 8H:/Practica9/DetectorFlanco.vhd
+Z6 FH:/Practica9/DetectorFlanco.vhd
+l0
+L4
+VIbF9k9?0Pce;0lZInZCbZ0
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1542996959.217000
+Z9 !s90 -reportprogress|300|-93|-work|work|H:/Practica9/DetectorFlanco.vhd|
+Z10 !s107 H:/Practica9/DetectorFlanco.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 EaJ^``JcT3ZG<7=eQ=:750
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 14 detectorflanco 0 22 IbF9k9?0Pce;0lZInZCbZ0
+l15
+L12
+V50mIPV6P3i_LRYPTSzZNR0
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 gUc@9>RKdk4kKP1]3feHA3
+!i10b 1
+Edetectorsecuenciaf1
+Z13 w1542808657
+R2
+R3
+R4
+Z14 8H:/Practica9/DetectorSecuenciaF1.vhd
+Z15 FH:/Practica9/DetectorSecuenciaF1.vhd
+l0
+L4
+V[a71KXNO<oM[UC=[a2Wmg3
+R7
+31
+Z16 !s108 1542996961.228000
+Z17 !s90 -reportprogress|300|-93|-work|work|H:/Practica9/DetectorSecuenciaF1.vhd|
+Z18 !s107 H:/Practica9/DetectorSecuenciaF1.vhd|
+R11
+R12
+!s100 kAlS7`^EBg0Dhm972KCTg3
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 19 detectorsecuenciaf1 0 22 [a71KXNO<oM[UC=[a2Wmg3
+l25
+L12
+V1aPLZ3g]31gC[_MMN^QdQ2
+R7
+31
+R16
+R17
+R18
+R11
+R12
+!s100 KF?c@SGWZ7B9c<OCUXm9_1
+!i10b 1
+Epractica9_vhd_tst
+Z19 w1542616627
+R2
+R3
+R4
+Z20 8H:/Practica9/simulation/modelsim/Practica9.vht
+Z21 FH:/Practica9/simulation/modelsim/Practica9.vht
+l0
+L3
+V1FP;@9GlhGZMK5h44fGbP1
+!s100 FHoM`bh[Ega=^YdjX1V<J3
+R7
+31
+!i10b 1
+Z22 !s108 1542996962.263000
+Z23 !s90 -reportprogress|300|-93|-work|work|H:/Practica9/simulation/modelsim/Practica9.vht|
+Z24 !s107 H:/Practica9/simulation/modelsim/Practica9.vht|
+R11
+R12
+Apractica9_arch
+R2
+R3
+DEx4 work 17 practica9_vhd_tst 0 22 1FP;@9GlhGZMK5h44fGbP1
+l21
+L5
+VflXCP1Y:z7[NQdTHKeoG30
+!s100 cSYn59f7M`ofjMJ5ET]cZ0
+R7
+31
+!i10b 1
+R22
+R23
+R24
+R11
+R12

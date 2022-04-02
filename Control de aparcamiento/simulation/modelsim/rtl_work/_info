@@ -1,0 +1,147 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\Practica10\simulation\modelsim
+Ebina7seg
+Z1 w1541594760
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dF:\Practica10\simulation\modelsim
+Z5 8F:/Practica10/bina7seg.vhd
+Z6 FF:/Practica10/bina7seg.vhd
+l0
+L6
+VQ22>alNQQRbmUjSW?1M0e1
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1543222043.159000
+Z9 !s90 -reportprogress|300|-93|-work|work|F:/Practica10/bina7seg.vhd|
+Z10 !s107 F:/Practica10/bina7seg.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 IKYefIU=D1EZ>NY0fZ[Wb0
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 8 bina7seg 0 22 Q22>alNQQRbmUjSW?1M0e1
+l12
+L11
+VAGNFa<jPlQFk@YjZDdXo13
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 S7QLHIj>RUUNF3@zT>Un^3
+!i10b 1
+Econtrolaparcamiento
+Z13 w1543218256
+Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z15 8F:/Practica10/ControlAparcamiento.vhd
+Z16 FF:/Practica10/ControlAparcamiento.vhd
+l0
+L5
+VSJF;Mc9eKMbJWVghWd?Hb1
+R7
+31
+Z17 !s108 1543222040.144000
+Z18 !s90 -reportprogress|300|-93|-work|work|F:/Practica10/ControlAparcamiento.vhd|
+Z19 !s107 F:/Practica10/ControlAparcamiento.vhd|
+R11
+R12
+!s100 C]12z0dC`QXFG[LTFF8?k2
+!i10b 1
+Abehavioral
+R14
+R2
+R3
+DEx4 work 19 controlaparcamiento 0 22 SJF;Mc9eKMbJWVghWd?Hb1
+l20
+L17
+Vg3kzMa<folY<0:Qll9lfN0
+R7
+31
+R17
+R18
+R19
+R11
+R12
+!s100 QI=LD]]2LRd[A@JzZlFB43
+!i10b 1
+Econtrolaparcamiento_vhd_tst
+Z20 w1543221958
+R2
+R3
+R4
+Z21 8F:/Practica10/simulation/modelsim/Practica10.vht
+Z22 FF:/Practica10/simulation/modelsim/Practica10.vht
+l0
+L3
+Vf[;KYJI9_?f8T8Pl`EA?K0
+!s100 UWSA3HS;Mo3ZL2NhfFE>`0
+R7
+31
+!i10b 1
+Z23 !s108 1543222044.175000
+Z24 !s90 -reportprogress|300|-93|-work|work|F:/Practica10/simulation/modelsim/Practica10.vht|
+Z25 !s107 F:/Practica10/simulation/modelsim/Practica10.vht|
+R11
+R12
+Acontrolaparcamiento_arch
+R2
+R3
+DEx4 work 27 controlaparcamiento_vhd_tst 0 22 f[;KYJI9_?f8T8Pl`EA?K0
+l31
+L6
+VWJ^3fGn;iY7oUh9lBXecJ0
+!s100 hcde5f=0RU8okhbI?ao`33
+R7
+31
+!i10b 1
+R23
+R24
+R25
+R11
+R12
+Edetectorflanco
+Z26 w1542803338
+R2
+R3
+R4
+Z27 8F:/Practica10/detectorflanco.vhd
+Z28 FF:/Practica10/detectorflanco.vhd
+l0
+L4
+VIbF9k9?0Pce;0lZInZCbZ0
+R7
+31
+Z29 !s108 1543222040.972000
+Z30 !s90 -reportprogress|300|-93|-work|work|F:/Practica10/detectorflanco.vhd|
+Z31 !s107 F:/Practica10/detectorflanco.vhd|
+R11
+R12
+!s100 EaJ^``JcT3ZG<7=eQ=:750
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 14 detectorflanco 0 22 IbF9k9?0Pce;0lZInZCbZ0
+l15
+L12
+V50mIPV6P3i_LRYPTSzZNR0
+R7
+31
+R29
+R30
+R31
+R11
+R12
+!s100 gUc@9>RKdk4kKP1]3feHA3
+!i10b 1

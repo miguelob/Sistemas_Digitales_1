@@ -1,0 +1,83 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Temp\Grupo2\Practica4\simulation\modelsim
+Epractica4
+Z1 w1538378053
+Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z3 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 zUjlM<IUJVWSWg:L2<>ic3
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 DPx9 cycloneii 20 cycloneii_components 0 22 h@gSJ;Al32oYg[7^PbnAR0
+Z8 dD:\Temp\Grupo2\Practica4\simulation\modelsim
+Z9 8Practica4.vho
+Z10 FPractica4.vho
+l0
+L34
+VWmB>mdT^D8GRd>aHG_jN@2
+Z11 OV;C;10.1d;51
+31
+Z12 !s108 1538378296.453000
+Z13 !s90 -reportprogress|300|-93|-work|work|Practica4.vho|
+Z14 !s107 Practica4.vho|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+!s100 kZk;2^RaIVggUkz`BW<Y^2
+!i10b 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 9 practica4 0 22 WmB>mdT^D8GRd>aHG_jN@2
+l119
+L74
+VbHo6YeCZ>dkHY5mTUZR_O2
+R11
+31
+R12
+R13
+R14
+R15
+R16
+!s100 @16Eko<20WNC9gDoZgadz3
+!i10b 1
+Epractica4_vhd_tst
+Z17 w1538378098
+R5
+R6
+R8
+Z18 8D:/Temp/Grupo2/Practica4/simulation/modelsim/Practica4.vht
+Z19 FD:/Temp/Grupo2/Practica4/simulation/modelsim/Practica4.vht
+l0
+L30
+Vo=:B8cY@e<gAh]KTCZ7I:1
+!s100 JLfVE=ZMP;OJ]I8HV76QW0
+R11
+31
+!i10b 1
+Z20 !s108 1538378296.656000
+Z21 !s90 -reportprogress|300|-93|-work|work|D:/Temp/Grupo2/Practica4/simulation/modelsim/Practica4.vht|
+Z22 !s107 D:/Temp/Grupo2/Practica4/simulation/modelsim/Practica4.vht|
+R15
+R16
+Apractica4_arch
+R5
+R6
+DEx4 work 17 practica4_vhd_tst 0 22 o=:B8cY@e<gAh]KTCZ7I:1
+l53
+L32
+V^edOmlCW5a28KPO9ZUVZG1
+!s100 1heg>;cG@Y16:oFJ?;K9Y3
+R11
+31
+!i10b 1
+R20
+R21
+R22
+R15
+R16

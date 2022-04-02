@@ -1,0 +1,131 @@
+# Reading E:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Practica7_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying E:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied E:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {H:/Practica7/Mux3a15bits.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Mux3a15bits
+# -- Compiling architecture behavioral of Mux3a15bits
+# vcom -93 -work work {H:/Practica7/UnidadControl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity UnidadControl
+# -- Compiling architecture behavioral of UnidadControl
+# vcom -93 -work work {H:/Practica7/Mux2a15bits.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Mux2a15bits
+# -- Compiling architecture behavioral of Mux2a15bits
+# vcom -93 -work work {H:/Practica7/Mux2a11bit.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Mux2a11bit
+# -- Compiling architecture behavioral of Mux2a11bit
+# vcom -93 -work work {H:/Practica7/FuncLogic.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FuncLogic
+# -- Compiling architecture behavioral of FuncLogic
+# vcom -93 -work work {H:/Practica7/Multiplicador.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Multiplicador
+# -- Compiling architecture behavioral of Multiplicador
+# vcom -93 -work work {H:/Practica7/SumadorRestador.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SumadorRestador5Bits
+# -- Compiling architecture structural of SumadorRestador5Bits
+# vcom -93 -work work {H:/Practica7/alucompleto.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ALUcompleto
+# -- Compiling architecture structural of ALUcompleto
+# vcom -93 -work work {H:/Practica7/sumador1bit.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Sumador1Bit
+# -- Compiling architecture behavioral of Sumador1Bit
+# vcom -93 -work work {H:/Practica7/bina7seg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity BinA7Seg
+# -- Compiling architecture behavioral of BinA7Seg
+# 
+# vcom -93 -work work {H:/Practica7/simulation/modelsim/Practica7.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ALU5Bits_vhd_tst
+# -- Compiling architecture ALU5Bits_arch of ALU5Bits_vhd_tst
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  Practica7
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps Practica7 
+# ** Error: (vsim-3170) Could not find 'H:/Practica7/simulation/modelsim/rtl_work.Practica7'.
+# 
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./Practica7_run_msim_rtl_vhdl.do PAUSED at line 21
+vsim work.alucompleto
+# vsim work.alucompleto 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.alucompleto(structural)
+# Loading work.unidadcontrol(behavioral)
+# Loading work.funclogic(behavioral)
+# Loading work.multiplicador(behavioral)
+# Loading work.sumadorrestador5bits(structural)
+# Loading work.sumador1bit(behavioral)
+# Loading work.mux2a11bit(behavioral)
+# Loading work.mux2a15bits(behavioral)
+# Loading work.mux3a15bits(behavioral)
+add wave -position end  sim:/alucompleto/a
+add wave -position end  sim:/alucompleto/b
+add wave -position end  sim:/alucompleto/sel
+add wave -position end  sim:/alucompleto/ov
+add wave -position end  sim:/alucompleto/s
+add wave -position end  sim:/alucompleto/sel_s_i
+add wave -position end  sim:/alucompleto/sel_ov_i
+add wave -position end  sim:/alucompleto/s_r_i
+add wave -position end  sim:/alucompleto/sel_b_i
+add wave -position end  sim:/alucompleto/sel_log_i
+add wave -position end  sim:/alucompleto/s_i
+add wave -position end  sim:/alucompleto/ov_1
+add wave -position end  sim:/alucompleto/ov_2
+add wave -position end  sim:/alucompleto/b_i

@@ -1,0 +1,135 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Pract2_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {Pract2.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity Pract2
+# -- Compiling architecture structure of Pract2
+# 
+# vcom -93 -work work {D:/Temp/Grupo2/Pract2/simulation/modelsim/Pract2.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Pract2_vhd_tst
+# -- Compiling architecture Pract2_arch of Pract2_vhd_tst
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /i1=Pract2_vhd.sdo -L cycloneii -L gate_work -L work -voptargs="+acc"  Pract2
+# vsim +transport_int_delays +transport_path_delays -L cycloneii -L gate_work -L work -voptargs=\"+acc\" -sdftyp /i1=Pract2_vhd.sdo -t 1ps Pract2 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.pract2(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading instances from Pract2_vhd.sdo
+# ** Error: (vsim-SDF-3250) Pract2_vhd.sdo(0): Failed to find INSTANCE '/i1'.
+# 
+# ** Error: (vsim-SDF-3894) : Errors occured in reading and resolving instances from compiled SDF file(s).
+# 
+# ** Error: (vsim-SDF-3250) Pract2_vhd.sdo(0): Failed to find INSTANCE '/i1'.
+# 
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./Pract2_run_msim_gate_vhdl.do PAUSED at line 12
+vsim gate_work.pract2_vhd_tst
+# vsim gate_work.pract2_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pract2_vhd_tst(pract2_arch)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.pract2(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+add wave -position end  sim:/pract2_vhd_tst/A0
+add wave -position end  sim:/pract2_vhd_tst/A1
+add wave -position end  sim:/pract2_vhd_tst/AigualB
+add wave -position end  sim:/pract2_vhd_tst/AmayorB
+add wave -position end  sim:/pract2_vhd_tst/AmenorB
+add wave -position end  sim:/pract2_vhd_tst/B0
+add wave -position end  sim:/pract2_vhd_tst/B1
+run -all
+add wave -position end  sim:/pract2_vhd_tst/A0
+add wave -position end  sim:/pract2_vhd_tst/A1
+add wave -position end  sim:/pract2_vhd_tst/AigualB
+add wave -position end  sim:/pract2_vhd_tst/AmayorB
+add wave -position end  sim:/pract2_vhd_tst/AmenorB
+add wave -position end  sim:/pract2_vhd_tst/B0
+add wave -position end  sim:/pract2_vhd_tst/B1
+vsim gate_work.pract2_vhd_tst
+# vsim gate_work.pract2_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading gate_work.pract2_vhd_tst(pract2_arch)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading gate_work.pract2(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+add wave -position end  sim:/pract2_vhd_tst/A0
+add wave -position end  sim:/pract2_vhd_tst/A1
+add wave -position end  sim:/pract2_vhd_tst/AigualB
+add wave -position end  sim:/pract2_vhd_tst/AmayorB
+add wave -position end  sim:/pract2_vhd_tst/AmenorB
+add wave -position end  sim:/pract2_vhd_tst/B0
+add wave -position end  sim:/pract2_vhd_tst/B1
+run -all
+vsim -t 10ps gate_work.pract2_vhd_tst
+# vsim -t 10ps gate_work.pract2_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading gate_work.pract2_vhd_tst(pract2_arch)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading gate_work.pract2(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# ** Warning: (vsim-3479) Time unit 'ps' is less than the simulator resolution (10ps).
+#    Time: 0 ps  Iteration: 0  Instance: /pract2_vhd_tst/i1/\B0~I\/asynch_inst File: C:/altera/13.0sp1/modelsim_ase/win32aloem/../altera/vhdl/src/cycloneii/cycloneii_atoms.vhd

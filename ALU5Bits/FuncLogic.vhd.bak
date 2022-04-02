@@ -1,0 +1,21 @@
+-- Unidad de funciones lógicas
+
+library ieee;
+use iee.std_logic_1164.all;
+
+entity FuncLogic is
+port (
+		a,b		:	in 	std_logic_vector(4 downto 0);
+		sel_log	:	in		std_logic_vector(1 downto 0);
+		s			:	out	std_logic_vector(4 downto 0));
+end FuncLogic;
+
+architecture behavioral of FuncLogic is
+begin --behavioral
+	
+	with sel_log select
+	s <=
+	(a and b) when "00",
+	"00000" when others;
+	
+end behavioral

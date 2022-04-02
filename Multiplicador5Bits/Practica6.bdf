@@ -1,0 +1,207 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 16 280 184 296)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "a[4..0]" (rect 5 0 36 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -48 296 16 312))
+)
+(pin
+	(input)
+	(rect 16 296 184 312)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "b[4..0]" (rect 5 0 36 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -40 312 16 328))
+)
+(pin
+	(output)
+	(rect 920 280 1096 296)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "disp2[6..0]" (rect 90 0 141 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 1096 296 1152 312))
+)
+(pin
+	(output)
+	(rect 920 152 1096 168)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "disp3[6..0]" (rect 90 0 141 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 1096 168 1152 184))
+)
+(pin
+	(output)
+	(rect 928 456 1104 472)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "disp1[6..0]" (rect 90 0 141 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 1104 472 1152 488))
+)
+(symbol
+	(rect 424 264 592 376)
+	(text "Multiplicador5BitsComp" (rect 5 0 119 12)(font "Arial" ))
+	(text "inst" (rect 8 96 25 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "a[4..0]" (rect 0 0 31 12)(font "Arial" ))
+		(text "a[4..0]" (rect 21 27 52 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "b[4..0]" (rect 0 0 31 12)(font "Arial" ))
+		(text "b[4..0]" (rect 21 43 52 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 168 32)
+		(output)
+		(text "disp1[6..0]" (rect 0 0 51 12)(font "Arial" ))
+		(text "disp1[6..0]" (rect 104 27 155 39)(font "Arial" ))
+		(line (pt 168 32)(pt 152 32)(line_width 3))
+	)
+	(port
+		(pt 168 48)
+		(output)
+		(text "disp2[6..0]" (rect 0 0 51 12)(font "Arial" ))
+		(text "disp2[6..0]" (rect 104 43 155 55)(font "Arial" ))
+		(line (pt 168 48)(pt 152 48)(line_width 3))
+	)
+	(port
+		(pt 168 64)
+		(output)
+		(text "disp3[6..0]" (rect 0 0 51 12)(font "Arial" ))
+		(text "disp3[6..0]" (rect 104 59 155 71)(font "Arial" ))
+		(line (pt 168 64)(pt 152 64)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 96))
+	)
+)
+(connector
+	(pt 256 304)
+	(pt 184 304)
+	(bus)
+)
+(connector
+	(text "<<__$DEF_ALIAS176>>" (rect 834 272 952 284)(font "Arial" )(invisible))
+	(pt 824 288)
+	(pt 920 288)
+	(bus)
+)
+(connector
+	(text "<<__$DEF_ALIAS178>>" (rect 842 144 960 156)(font "Arial" )(invisible))
+	(pt 832 160)
+	(pt 920 160)
+	(bus)
+)
+(connector
+	(text "<<__$DEF_ALIAS180>>" (rect 834 448 952 460)(font "Arial" )(invisible))
+	(pt 824 464)
+	(pt 928 464)
+	(bus)
+)
+(connector
+	(pt 424 288)
+	(pt 424 296)
+	(bus)
+)
+(connector
+	(pt 424 312)
+	(pt 256 312)
+	(bus)
+)
+(connector
+	(pt 256 312)
+	(pt 256 304)
+	(bus)
+)
+(connector
+	(pt 184 288)
+	(pt 424 288)
+	(bus)
+)
+(connector
+	(pt 592 296)
+	(pt 824 464)
+	(bus)
+)
+(connector
+	(pt 592 312)
+	(pt 824 288)
+	(bus)
+)
+(connector
+	(pt 592 328)
+	(pt 832 160)
+	(bus)
+)

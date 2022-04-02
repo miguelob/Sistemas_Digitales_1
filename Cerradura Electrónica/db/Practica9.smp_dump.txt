@@ -1,0 +1,20 @@
+
+State Machine - |Practica9|DetectorSecuenciaF1:inst|estado_act
+Name estado_act.EP0EP1EP1EP0 estado_act.EP0EP1EP1 estado_act.EP0EP1 estado_act.EP0 estado_act.Reposo 
+estado_act.Reposo 0 0 0 0 0 
+estado_act.EP0 0 0 0 1 1 
+estado_act.EP0EP1 0 0 1 0 1 
+estado_act.EP0EP1EP1 0 1 0 0 1 
+estado_act.EP0EP1EP1EP0 1 0 0 0 1 
+
+State Machine - |Practica9|DetectorSecuenciaF1:inst|DetectorFlanco:DetectorFlanco_2|estado_act
+Name estado_act.Esp1 estado_act.Pulso estado_act.Esp0 
+estado_act.Esp0 0 0 0 
+estado_act.Pulso 0 1 1 
+estado_act.Esp1 1 0 1 
+
+State Machine - |Practica9|DetectorSecuenciaF1:inst|DetectorFlanco:DetectorFlanco_1|estado_act
+Name estado_act.Esp1 estado_act.Pulso estado_act.Esp0 
+estado_act.Esp0 0 0 0 
+estado_act.Pulso 0 1 1 
+estado_act.Esp1 1 0 1 

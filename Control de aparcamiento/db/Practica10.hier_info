@@ -1,0 +1,188 @@
+|Practica10
+led_g <= ControlAparcamiento:inst.led_g
+clk => ControlAparcamiento:inst.clk
+clk => DetectorFlanco:inst4.clk
+clk => DetectorFlanco:inst5.clk
+reset_n => ControlAparcamiento:inst.reset_n
+reset_n => DetectorFlanco:inst4.reset_n
+reset_n => DetectorFlanco:inst5.reset_n
+entra => DetectorFlanco:inst4.e
+sale => DetectorFlanco:inst5.e
+max[0] => ControlAparcamiento:inst.max[0]
+max[1] => ControlAparcamiento:inst.max[1]
+max[2] => ControlAparcamiento:inst.max[2]
+max[3] => ControlAparcamiento:inst.max[3]
+max[4] => ControlAparcamiento:inst.max[4]
+max[5] => ControlAparcamiento:inst.max[5]
+max[6] => ControlAparcamiento:inst.max[6]
+max[7] => ControlAparcamiento:inst.max[7]
+led_r <= ControlAparcamiento:inst.led_r
+disp0[0] <= BinA7Seg:inst3.output[0]
+disp0[1] <= BinA7Seg:inst3.output[1]
+disp0[2] <= BinA7Seg:inst3.output[2]
+disp0[3] <= BinA7Seg:inst3.output[3]
+disp0[4] <= BinA7Seg:inst3.output[4]
+disp0[5] <= BinA7Seg:inst3.output[5]
+disp0[6] <= BinA7Seg:inst3.output[6]
+disp1[0] <= BinA7Seg:inst2.output[0]
+disp1[1] <= BinA7Seg:inst2.output[1]
+disp1[2] <= BinA7Seg:inst2.output[2]
+disp1[3] <= BinA7Seg:inst2.output[3]
+disp1[4] <= BinA7Seg:inst2.output[4]
+disp1[5] <= BinA7Seg:inst2.output[5]
+disp1[6] <= BinA7Seg:inst2.output[6]
+
+
+|Practica10|ControlAparcamiento:inst
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+reset_n => contador[0].ACLR
+reset_n => contador[1].ACLR
+reset_n => contador[2].ACLR
+reset_n => contador[3].ACLR
+reset_n => contador[4].ACLR
+reset_n => contador[5].ACLR
+reset_n => contador[6].ACLR
+reset_n => contador[7].ACLR
+entra => process_0.IN0
+entra => process_0.IN0
+sale => process_0.IN1
+sale => process_0.IN1
+led_g <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+led_r <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+max[0] => LessThan0.IN8
+max[0] => Equal0.IN7
+max[1] => LessThan0.IN7
+max[1] => Equal0.IN6
+max[2] => LessThan0.IN6
+max[2] => Equal0.IN5
+max[3] => LessThan0.IN5
+max[3] => Equal0.IN4
+max[4] => LessThan0.IN4
+max[4] => Equal0.IN3
+max[5] => LessThan0.IN3
+max[5] => Equal0.IN2
+max[6] => LessThan0.IN2
+max[6] => Equal0.IN1
+max[7] => LessThan0.IN1
+max[7] => Equal0.IN0
+s[0] <= contador[0].DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= contador[1].DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= contador[2].DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= contador[3].DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= contador[4].DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= contador[5].DB_MAX_OUTPUT_PORT_TYPE
+s[6] <= contador[6].DB_MAX_OUTPUT_PORT_TYPE
+s[7] <= contador[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica10|DetectorFlanco:inst4
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => Selector2.IN2
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => Selector0.IN1
+reset_n => estado_act~3.DATAIN
+clk => estado_act~1.DATAIN
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica10|DetectorFlanco:inst5
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => Selector2.IN2
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => Selector0.IN1
+reset_n => estado_act~3.DATAIN
+clk => estado_act~1.DATAIN
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica10|BinA7Seg:inst3
+input[0] => Mux0.IN19
+input[0] => Mux1.IN19
+input[0] => Mux2.IN19
+input[0] => Mux3.IN19
+input[0] => Mux4.IN19
+input[0] => Mux5.IN19
+input[0] => Mux6.IN19
+input[1] => Mux0.IN18
+input[1] => Mux1.IN18
+input[1] => Mux2.IN18
+input[1] => Mux3.IN18
+input[1] => Mux4.IN18
+input[1] => Mux5.IN18
+input[1] => Mux6.IN18
+input[2] => Mux0.IN17
+input[2] => Mux1.IN17
+input[2] => Mux2.IN17
+input[2] => Mux3.IN17
+input[2] => Mux4.IN17
+input[2] => Mux5.IN17
+input[2] => Mux6.IN17
+input[3] => Mux0.IN16
+input[3] => Mux1.IN16
+input[3] => Mux2.IN16
+input[3] => Mux3.IN16
+input[3] => Mux4.IN16
+input[3] => Mux5.IN16
+input[3] => Mux6.IN16
+output[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica10|BinA7Seg:inst2
+input[0] => Mux0.IN19
+input[0] => Mux1.IN19
+input[0] => Mux2.IN19
+input[0] => Mux3.IN19
+input[0] => Mux4.IN19
+input[0] => Mux5.IN19
+input[0] => Mux6.IN19
+input[1] => Mux0.IN18
+input[1] => Mux1.IN18
+input[1] => Mux2.IN18
+input[1] => Mux3.IN18
+input[1] => Mux4.IN18
+input[1] => Mux5.IN18
+input[1] => Mux6.IN18
+input[2] => Mux0.IN17
+input[2] => Mux1.IN17
+input[2] => Mux2.IN17
+input[2] => Mux3.IN17
+input[2] => Mux4.IN17
+input[2] => Mux5.IN17
+input[2] => Mux6.IN17
+input[3] => Mux0.IN16
+input[3] => Mux1.IN16
+input[3] => Mux2.IN16
+input[3] => Mux3.IN16
+input[3] => Mux4.IN16
+input[3] => Mux5.IN16
+input[3] => Mux6.IN16
+output[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

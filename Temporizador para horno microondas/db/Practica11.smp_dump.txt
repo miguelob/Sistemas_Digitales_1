@@ -1,0 +1,10 @@
+
+State Machine - |Microondas|UnidadControl:i_UnidadControl|estado_act
+Name estado_act.Abierto estado_act.Finalizado estado_act.Activo estado_act.CargaSeg estado_act.EspBot estado_act.CargaMin estado_act.Reposo 
+estado_act.Reposo 0 0 0 0 0 0 0 
+estado_act.CargaMin 0 0 0 0 0 1 1 
+estado_act.EspBot 0 0 0 0 1 0 1 
+estado_act.CargaSeg 0 0 0 1 0 0 1 
+estado_act.Activo 0 0 1 0 0 0 1 
+estado_act.Finalizado 0 1 0 0 0 0 1 
+estado_act.Abierto 1 0 0 0 0 0 1 

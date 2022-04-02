@@ -1,0 +1,50 @@
+|Practica9
+espera <= DetectorSecuenciaF1:inst.s2
+reset => DetectorSecuenciaF1:inst.reset_n
+clk => DetectorSecuenciaF1:inst.clk
+p1 => DetectorSecuenciaF1:inst.p1
+p0 => DetectorSecuenciaF1:inst.p0
+valid <= DetectorSecuenciaF1:inst.s
+
+
+|Practica9|DetectorSecuenciaF1:inst
+reset_n => DetectorFlanco:DetectorFlanco_1.reset_n
+reset_n => DetectorFlanco:DetectorFlanco_2.reset_n
+reset_n => estado_act~3.DATAIN
+clk => DetectorFlanco:DetectorFlanco_1.clk
+clk => DetectorFlanco:DetectorFlanco_2.clk
+clk => estado_act~1.DATAIN
+p1 => DetectorFlanco:DetectorFlanco_1.e
+p0 => DetectorFlanco:DetectorFlanco_2.e
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+s2 <= s2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica9|DetectorSecuenciaF1:inst|DetectorFlanco:DetectorFlanco_1
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => Selector2.IN2
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => Selector0.IN1
+reset_n => estado_act~3.DATAIN
+clk => estado_act~1.DATAIN
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica9|DetectorSecuenciaF1:inst|DetectorFlanco:DetectorFlanco_2
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => Selector2.IN2
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => estado_sig.OUTPUTSELECT
+e => Selector0.IN1
+reset_n => estado_act~3.DATAIN
+clk => estado_act~1.DATAIN
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,151 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\Practica6 .1\simulation\modelsim
+Ebina7seg
+Z1 w1538379862
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dF:\Practica6 .1\simulation\modelsim
+Z5 8F:/Practica6 .1/bina7seg.vhd
+Z6 FF:/Practica6 .1/bina7seg.vhd
+l0
+L6
+VQ22>alNQQRbmUjSW?1M0e1
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1540801889.028000
+Z9 !s90 -reportprogress|300|-93|-work|work|F:/Practica6 .1/bina7seg.vhd|
+Z10 !s107 F:/Practica6 .1/bina7seg.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 IKYefIU=D1EZ>NY0fZ[Wb0
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 8 bina7seg 0 22 Q22>alNQQRbmUjSW?1M0e1
+l12
+L11
+VAGNFa<jPlQFk@YjZDdXo13
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 S7QLHIj>RUUNF3@zT>Un^3
+!i10b 1
+Emultiplicador5bits
+Z13 w1540757424
+Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z15 8F:/Practica6 .1/Multiplicador5Bits.vhd
+Z16 FF:/Practica6 .1/Multiplicador5Bits.vhd
+l0
+L5
+V;9I=onLTkD55;]Lh@R>jR3
+R7
+31
+Z17 !s108 1540801887.403000
+Z18 !s90 -reportprogress|300|-93|-work|work|F:/Practica6 .1/Multiplicador5Bits.vhd|
+Z19 !s107 F:/Practica6 .1/Multiplicador5Bits.vhd|
+R11
+R12
+!s100 n@4WgDC@Xd@I]oPJ9Y0eL0
+!i10b 1
+Abehavioral
+R14
+R2
+R3
+DEx4 work 18 multiplicador5bits 0 22 ;9I=onLTkD55;]Lh@R>jR3
+l16
+L12
+V`U18JCgXR8c:OeM5Xm28R2
+R7
+31
+R17
+R18
+R19
+R11
+R12
+!s100 C3@^^kQe?bdJG^zMZjVNN2
+!i10b 1
+Emultiplicador5bits_vhd_tst
+Z20 w1540797796
+R14
+R2
+R3
+R4
+Z21 8F:/Practica6 .1/simulation/modelsim/Practica6.vht
+Z22 FF:/Practica6 .1/simulation/modelsim/Practica6.vht
+l0
+L4
+VF^XGmV<i]`M]h?nHZnzQO0
+!s100 6glZ2:?;Fm:m1VFm@3YZT2
+R7
+31
+!i10b 1
+Z23 !s108 1540801889.606000
+Z24 !s90 -reportprogress|300|-93|-work|work|F:/Practica6 .1/simulation/modelsim/Practica6.vht|
+Z25 !s107 F:/Practica6 .1/simulation/modelsim/Practica6.vht|
+R11
+R12
+Amultiplicador5bits_arch
+R14
+R2
+R3
+DEx4 work 26 multiplicador5bits_vhd_tst 0 22 F^XGmV<i]`M]h?nHZnzQO0
+l17
+L6
+V0VmhW>fE59NSgOalgKb2X3
+!s100 ]9?=RXUI35?lcCM^MI1[A0
+R7
+31
+!i10b 1
+R23
+R24
+R25
+R11
+R12
+Emultiplicador5bitscomp
+Z26 w1540801682
+R14
+R2
+R3
+R4
+Z27 8F:/Practica6 .1/Multiplicador5BitsComp.vhd
+Z28 FF:/Practica6 .1/Multiplicador5BitsComp.vhd
+l0
+L5
+Vc:4^L`DFBD[:gX@W>]fRm3
+R7
+31
+Z29 !s108 1540801888.528000
+Z30 !s90 -reportprogress|300|-93|-work|work|F:/Practica6 .1/Multiplicador5BitsComp.vhd|
+Z31 !s107 F:/Practica6 .1/Multiplicador5BitsComp.vhd|
+R11
+R12
+!s100 [@YiiRc^2ANzCZOenXhLi1
+!i10b 1
+Astructural
+R14
+R2
+R3
+DEx4 work 22 multiplicador5bitscomp 0 22 c:4^L`DFBD[:gX@W>]fRm3
+l29
+L11
+VSNi0mo6o]^<==cz2i4cla2
+R7
+31
+R29
+R30
+R31
+R11
+R12
+!s100 i7GE1M=^L=W?dcibj;jWD3
+!i10b 1

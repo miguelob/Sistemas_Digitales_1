@@ -1,0 +1,12 @@
+
+State Machine - |Practica10|DetectorFlanco:inst5|estado_act
+Name estado_act.Esp1 estado_act.Pulso estado_act.Esp0 
+estado_act.Esp0 0 0 0 
+estado_act.Pulso 0 1 1 
+estado_act.Esp1 1 0 1 
+
+State Machine - |Practica10|DetectorFlanco:inst4|estado_act
+Name estado_act.Esp1 estado_act.Pulso estado_act.Esp0 
+estado_act.Esp0 0 0 0 
+estado_act.Pulso 0 1 1 
+estado_act.Esp1 1 0 1 

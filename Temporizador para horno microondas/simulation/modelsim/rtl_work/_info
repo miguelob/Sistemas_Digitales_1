@@ -1,0 +1,221 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Practica11\simulation\modelsim
+Econtadordescmod10
+Z1 w1543823016
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dD:\Practica11\simulation\modelsim
+Z6 8D:/Practica11/ContadorDescMod10.vhd
+Z7 FD:/Practica11/ContadorDescMod10.vhd
+l0
+L5
+VZ?C4Q3bgZaj`hB>zLZeHh2
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1544010655.681000
+Z10 !s90 -reportprogress|300|-93|-work|work|D:/Practica11/ContadorDescMod10.vhd|
+Z11 !s107 D:/Practica11/ContadorDescMod10.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 gGm`IbQ0e`hkc`9Z6Y0f23
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 17 contadordescmod10 0 22 Z?C4Q3bgZaj`hB>zLZeHh2
+l19
+L16
+V2>OLE3PMb9c<hMTKfnF_b0
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 =>O^LY^gzmYECfUijR;]81
+!i10b 1
+Econtadordescmod6
+Z14 w1543823060
+R2
+R3
+R4
+R5
+Z15 8D:/Practica11/ContadorDescMod6.vhd
+Z16 FD:/Practica11/ContadorDescMod6.vhd
+l0
+L5
+VhalznHc9n?267mA1XmHb>1
+R8
+31
+Z17 !s108 1544010656.443000
+Z18 !s90 -reportprogress|300|-93|-work|work|D:/Practica11/ContadorDescMod6.vhd|
+Z19 !s107 D:/Practica11/ContadorDescMod6.vhd|
+R12
+R13
+!s100 >5=oDB70l]3B]Jk[zzMb_1
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 16 contadordescmod6 0 22 halznHc9n?267mA1XmHb>1
+l19
+L16
+VWVQf?>a70EJgG16ffmL]d0
+R8
+31
+R17
+R18
+R19
+R12
+R13
+!s100 GgNXITR[Ik60CK[fiPkYP1
+!i10b 1
+Econtadormod50m
+Z20 w1543823473
+R2
+R3
+R4
+R5
+Z21 8D:/Practica11/ContadorMod50M.vhd
+Z22 FD:/Practica11/ContadorMod50M.vhd
+l0
+L5
+VBONEGcAgEh^ThZK_18U1D2
+R8
+31
+Z23 !s108 1544010658.316000
+Z24 !s90 -reportprogress|300|-93|-work|work|D:/Practica11/ContadorMod50M.vhd|
+Z25 !s107 D:/Practica11/ContadorMod50M.vhd|
+R12
+R13
+!s100 AX`kgD?_L`Ad3Rm@j?]6J0
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 14 contadormod50m 0 22 BONEGcAgEh^ThZK_18U1D2
+l15
+L13
+Vzo;fD_zYl=[2Zeg2T155I2
+R8
+31
+R23
+R24
+R25
+R12
+R13
+!s100 H9]fc2EH2JOSGLBN<2LO83
+!i10b 1
+Emicroondas
+Z26 w1543824669
+R3
+R4
+R5
+Z27 8D:/Practica11/Microondas.vhd
+Z28 FD:/Practica11/Microondas.vhd
+l0
+L4
+VP<Lk;=94ZGG7J_<l:FPTz1
+R8
+31
+Z29 !s108 1544010662.298000
+Z30 !s90 -reportprogress|300|-93|-work|work|D:/Practica11/Microondas.vhd|
+Z31 !s107 D:/Practica11/Microondas.vhd|
+R12
+R13
+!s100 dmgn[[7Q6;5CRSMQLiTGj1
+!i10b 1
+Astructural
+R3
+R4
+DEx4 work 10 microondas 0 22 P<Lk;=94ZGG7J_<l:FPTz1
+l55
+L18
+VPDXfgi9HlFdL]FCIPaCh70
+R8
+31
+R29
+R30
+R31
+R12
+R13
+!s100 []hJDOQEZ`5iKzT8iV]L53
+!i10b 1
+Emicroondas_vhd_tst
+Z32 w1544010255
+R3
+R4
+R5
+Z33 8D:/Practica11/simulation/modelsim/Microondas.vht
+Z34 FD:/Practica11/simulation/modelsim/Microondas.vht
+l0
+L30
+VZo6K8ViaMm4DTjS_M2WLM2
+!s100 @9U77@R]SMYVU;0O^TY]Q1
+R8
+31
+!i10b 1
+Z35 !s108 1544010664.549000
+Z36 !s90 -reportprogress|300|-93|-work|work|D:/Practica11/simulation/modelsim/Microondas.vht|
+Z37 !s107 D:/Practica11/simulation/modelsim/Microondas.vht|
+R12
+R13
+Amicroondas_arch
+R3
+R4
+DEx4 work 18 microondas_vhd_tst 0 22 Zo6K8ViaMm4DTjS_M2WLM2
+l59
+L32
+Vg[L2U_B>eHkc@DKm>LBTU0
+!s100 7Q4I1c[b>GEd[Gno?4aKd1
+R8
+31
+!i10b 1
+R35
+R36
+R37
+R12
+R13
+Eunidadcontrol
+Z38 w1544003221
+R3
+R4
+R5
+Z39 8D:/Practica11/UnidadControl.vhd
+Z40 FD:/Practica11/UnidadControl.vhd
+l0
+L4
+V<nN>aGBJ8Y^^0H^?lLHB=3
+R8
+31
+Z41 !s108 1544010660.469000
+Z42 !s90 -reportprogress|300|-93|-work|work|D:/Practica11/UnidadControl.vhd|
+Z43 !s107 D:/Practica11/UnidadControl.vhd|
+R12
+R13
+!s100 ]cQ1R>Tj@iKzc3k`PS<5_0
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 13 unidadcontrol 0 22 <nN>aGBJ8Y^^0H^?lLHB=3
+l22
+L19
+V9REmGO7`e4dM@3:<kNR`>3
+R8
+31
+R41
+R42
+R43
+R12
+R13
+!s100 I;h81?@I][U:13e0<<]CT1
+!i10b 1

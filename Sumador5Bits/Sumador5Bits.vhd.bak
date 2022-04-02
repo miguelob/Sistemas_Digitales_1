@@ -1,0 +1,17 @@
+-- Sumador con acarreo en serie para números de 5 bits
+
+library ieee;
+use ieee.std_logic_1154.all;
+
+entity Sumador5Bits is
+
+	port(
+			a,b			: in	std_logic_vector(4 downto 0);
+			s				: out	std_logic_vector(4 downto 0);
+			c_out			: out	std_logic);
+end Sumador5Bits;
+
+architecture structural of Sumador5Bits is
+	signal c	: std_logic_vector(5 downto 0);
+	
+	component Sumador1Bit
